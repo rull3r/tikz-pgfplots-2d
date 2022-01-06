@@ -1,0 +1,79 @@
+---
+title: "PGFPLOTS/TIKZ"
+subtitle: "Un poco de historia"
+author: "..."
+institute: "..."
+date: "(updated: `r Sys.Date()`)"
+header-includes: 
+  - \usepackage{amsmath}
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+output:
+  xaringan::moon_reader:
+    css: ['shinobi',"ninjutsu", "assets/ninpo.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      ratio: '16:9'
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+layout: true
+class: split-two 
+
+.column.bg-main1[.content[
+  .split-three[
+ .row[.content.center.vmiddle[
+ # Porque $\LaTeX{}$?
+ ]]
+  .row[.content.center.vmiddle[
+     # $\TeX{}$
+ ]]
+   .row[.content.center.vmiddle[
+      # $\LaTeX{}$
+ ]]
+ ]
+]]
+
+.column.bg-main1[.content.center.vmiddle[
+{{content}}
+]]
+
+???
+Define the layout and for sequence hide the appropriate cell.
+
+---
+
+class: hide-row2-col1 hide-row3-col1 with-border
+
+ <font size="6"> \(\LaTeX{}\)<sup>1</sup> es una herremienta increible creada principalmente para escribir manuscritos cientificos o simplemente texto con un acabado profesional, sin la rigidez que ofrecen otros programas como el Odiado y Amado Microsoft Word, no hay puntos medios, o lo amas, o lo odias, supongo que ya sabes algo de latex y por eso estas leyendo esto, asi que sabras que latex no es solo para textos, se pueden hacer infitas cosas, este curso se basara en la graficacion, sin embargo, nunca esta de mas conocer mas sobre su historia antes de comenzar con el curso de graficacion en 2D, quiero mencionar tambien que supondre que tienes cierto conocimiente matematico, no me detendre en explicar, por ejemplo, que es una funcion polinomica, como encontrar las raices o demostrar el teorema fundamental del algebra, me enfocare solo en como puedes usar Latex para graficarlo practicamente todo... Comencemos</font>
+ 
+ <span class="footnote" style="text-align:left"><sup>1</sup> Esta forma tan particular de escribir se logra con `$\LaTex{}$`</span>
+
+---
+
+class: hide-row1-col1 hide-row3-col1 with-border 
+count: false
+
+$\TeX{}$
+
+---
+
+class: hide-row1-col1 hide-row2-col1 with-border
+count: false
+
+Hola 3
+
+
+---
+
+
+---
+
