@@ -42,7 +42,7 @@ class: split-33
  ]
 ]]
 
-.column.bg-main1[.content.center.vmiddle[
+.column.bg-main1[.content.left.justificacion.vmiddle[
 {{content}}
 ]]
 
@@ -95,7 +95,7 @@ layout: false
 class: bg-main1 center middle hide-slide-number
 
 .reveal-text.bg-main2[.pad1[
-.font4[Tikz y PGFPlots]
+.font4.center[Tikz y PGFPlots]
 ]]
 
 ---
@@ -108,7 +108,7 @@ class: split-33
  # PGF
  ]]
   .row[.content.center.vmiddle.reveal-text[
-  # Tikz
+  # TikZ
  ]]
    .row[.content.center.vmiddle.reveal-text[
   # PGFPlots
@@ -116,7 +116,7 @@ class: split-33
  ]
 ]]
 
-.column.bg-main1[.content.center.vmiddle[
+.column.bg-main1[.content.left.justificacion.vmiddle[
 {{content}}
 ]]
 
@@ -140,6 +140,12 @@ En palabras del Till:
 
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
+
+```{}
+#button {
+    border: none;
+}
+```
 
 hola2
  
