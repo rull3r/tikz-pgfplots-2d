@@ -5,9 +5,11 @@
     <meta charset="utf-8" />
     <meta name="author" content="…" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/shinobi.css" rel="stylesheet" />
     <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/ninpo.css" type="text/css" />
+    <link href="libs/remark-css/ninpo.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -17,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## Un poco de historia
 ### …
 ### …
-### (updated: 2022-01-05)
+### (updated: 2022-01-07)
 
 ---
 
@@ -26,18 +28,18 @@ class: center, middle, inverse, title-slide
 
 
 layout: true
-class: split-two 
+class: split-33
 
 .column.bg-main1[.content[
   .split-three[
- .row[.content.center.vmiddle[
+ .row[.content.center.vmiddle.reveal-text[
  # Porque `\(\LaTeX{}\)`?
  ]]
-  .row[.content.center.vmiddle[
-     # `\(\TeX{}\)`
+  .row[.content.center.vmiddle.reveal-text[
+  # `\(\TeX{}\)`
  ]]
-   .row[.content.center.vmiddle[
-      # `\(\LaTeX{}\)`
+   .row[.content.center.vmiddle.reveal-text[
+  # `\(\LaTeX{}\)`
  ]]
  ]
 ]]
@@ -53,29 +55,108 @@ Define the layout and for sequence hide the appropriate cell.
 
 class: hide-row2-col1 hide-row3-col1 with-border
 
- &lt;font size="6"&gt; \(\LaTeX{}\)&lt;sup&gt;1&lt;/sup&gt; es una herremienta increible creada principalmente para escribir manuscritos cientificos o simplemente texto con un acabado profesional, sin la rigidez que ofrecen otros programas como el Odiado y Amado Microsoft Word, no hay puntos medios, o lo amas, o lo odias, supongo que ya sabes algo de latex y por eso estas leyendo esto, asi que sabras que latex no es solo para textos, se pueden hacer infitas cosas, este curso se basara en la graficacion, sin embargo, nunca esta de mas conocer mas sobre su historia antes de comenzar con el curso de graficacion en 2D, quiero mencionar tambien que supondre que tienes cierto conocimiente matematico, no me detendre en explicar, por ejemplo, que es una funcion polinomica, como encontrar las raices o demostrar el teorema fundamental del algebra, me enfocare solo en como puedes usar Latex para graficarlo practicamente todo... Comencemos&lt;/font&gt;
+ `\(\LaTeX{}\)`&lt;sup&gt;1&lt;/sup&gt; es una herremienta increible creada principalmente para escribir manuscritos cientificos o simplemente texto con un acabado profesional, sin la rigidez que ofrecen otros programas como el Odiado y Amado Microsoft Word, no hay puntos medios, o lo amas, o lo odias, supongo que ya sabes algo de latex y por eso estas leyendo esto, asi que sabras que latex no es solo para textos, se pueden hacer infitas cosas, este curso se basara en la graficacion, sin embargo, nunca esta de mas conocer mas sobre su historia antes de comenzar con el curso de graficacion en 2D, quiero mencionar tambien que supondre que tienes cierto conocimiente matematico, no me detendre en explicar, por ejemplo, que es una funcion polinomica, como encontrar las raices o demostrar el teorema fundamental del algebra, me enfocare solo en como puedes usar Latex para graficarlo practicamente todo... Comencemos
  
- &lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;1&lt;/sup&gt; Esta forma tan particular de escribir se logra con `$\LaTex{}$`&lt;/span&gt;
+ &lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;1&lt;/sup&gt; Esta forma tan particular de escribir se logra con `$\LaTeX{}$`&lt;/span&gt;
 
 ---
 
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-`\(\TeX{}\)`
+Estoy seguro que haz escuchado mucho de Latex pero no de `\(\TeX{}\)`&lt;sup&gt;2&lt;/sup&gt;, pero que es TeX?, Bueno es pocas palabras es con los que se contruyo Latex, es decir, podriamos decir, cuando ejecutamos una instruccion en Latex, TeX lo interpretara y generara lo que necesitamos, TeX fue desarrollado en 19xx despues de 8 a;os de trabajo por el gran [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) por que penso acertadamente que el necesitaba mejores lenguajes tipograficas para hacer las publicaciones cientificas, Knuth empezó a escribir TeX porque se sentía molesto con la calidad cada vez menor de la tipografía en los volúmenes I a III de su obra El arte de programar ordenadores. Empezó por ello a diseñar su propio lenguaje de tipografía. Pensó que podría acabarlo en su año sabático, 1978; se equivocó por tan solo ocho años. El lenguaje se finalizó y congeló (no se hicieron más modificaciones) alrededor de 1985.
 
+La primera versión de TeX se escribió usando el [lenguaje de programación SAIL](https://en.wikipedia.org/wiki/SAIL_(programming_language)) que se ejecutaba en una [PDP-10](https://en.wikipedia.org/wiki/PDP-10) en el sistema operativo WAITS de la Universidad de Stanford. Para las versiones posteriores de TeX, Knuth inventó el concepto de [programación literaria](https://en.wikipedia.org/wiki/Literate_programming), una forma de producir código fuente compilable y documentación con referencias de alta calidad (por supuesto, escrito en TeX) partiendo del mismo archivo original. El lenguaje usado se llama WEB y produce programas en [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)).
+
+ &lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;2&lt;/sup&gt; Esta forma tan particular de escribir se logra con `$\TeX{}$`&lt;/span&gt;
+ 
 ---
 
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-Hola 3
+Por otro lado Latex fue Creado en 1984 por [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) como un conjunto de Macros de TeX, y desde entonces poco a poco la comunidad lo ha ido actualizando actualmente estamos en la version latex2e&lt;sup&gt;3&lt;/sup&gt;, su definicion oficial es LaTeX es un sistema de composición tipográfica de alta calidad; incluye funcionalidades diseñadas para la producción de documentación técnica y científica. pero no es solo eso, podemos desde crear animaciones, e inscrustar videos, los mas puristas no dicen que LaTeX es un lenguaje de programacion, pero una pequena parte de los conocedores si lo consideran un lenguaje de programacion, 
+
+Con LaTeX podemos separar el dise;o del documento con el contenido en dos archivos diferente. Alguien puede escribir el contenido a pesar de establecer el diseño en el proceso. En LaTeX, un autor trabaja en un editor de texto, escribiendo y especificando la estructura de una página. LaTeX realiza la composición tipográfica en el momento de la compilación para lidiar con la apariencia del documento. La separación de los dos procesos facilita el proceso y los usuarios pueden centrarse tanto en el estilo como en el contenido de forma individual.
+
+LaTeX ofrece cualquier tipo de solucion para cualquier usuario. Hay paquetes de todo tipo y para todos los gustos Estos son gratuitos y están diseñados para simplificar cualquier tarea compleja. Por ejemplo, el paquete [Bibtex](https://en.wikipedia.org/wiki/BibTeX) es altamente eficiente para los principales usuarios de LaTeX que trabajan en campos académicos e institutos de investigación. Ofrece gestión de bibliografía para una mejor representación de sus artículos. [Tikz y PGFPlots](https://en.wikipedia.org/wiki/PGF/TikZ) permite cualqueir tipo de graficos en 2D o 3D, Diagramas de Bloques. También hay una variedad de paquetes para componer partituras musicales y crucigramas, para elementos quimicos, lenguajes de programacion, animaciones, etc.
+
+La mayoría de la gente usa [Word](https://en.wikipedia.org/wiki/Microsoft_Word) para escribir y administrar el formato de un archivo de varias páginas. Desafortunadamente, no ofrecerá una experiencia agradable a muchos usuarios. Pero con LaTeX, uno puede dividir un documento enorme en muchos fragmentos más pequeños que luego pueden ser agregados automáticamente por LaTeX. Además, LaTeX permite al usuario crear fácilmente bibliografías, índices y tablas de contenido en varios archivos.
+
+Además de todas las otras funciones brillantes, LaTeX es gratis.
+
+&lt;!-- para seguir animandote te mostrare a continuacion cosas que podras lograr al final de este curso --&gt;
 
 
+ &lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;3&lt;/sup&gt; para saber mas acerca del proyecto visita su [pagina oficial](https://www.latex-project.org/) o su [repositorio oficial](https://github.com/latex3/latex2e)&lt;/span&gt;
 ---
 
 
+layout: false
+
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4[Tikz y PGFPlots]
+]]
+
 ---
+layout: true
+class: split-33
+
+.column.bg-main1[.content[
+  .split-three[
+ .row[.content.center.vmiddle.reveal-text[
+ # PGF
+ ]]
+  .row[.content.center.vmiddle.reveal-text[
+  # Tikz
+ ]]
+   .row[.content.center.vmiddle.reveal-text[
+  # PGFPlots
+ ]]
+ ]
+]]
+
+.column.bg-main1[.content.center.vmiddle[
+{{content}}
+]]
+
+???
+Define the layout and for sequence hide the appropriate cell.
+
+---
+
+class: hide-row2-col1 hide-row3-col1 with-border
+
+Que es PGF? no necesitas saber mucho de esto, ya que no lo usaras directamente, pero siempre es bueno saber estos terminos, en palabras muy generales podemos decir que PGF es el base de TikZ&lt;sup&gt;4&lt;/sup&gt;, PGF es un lenguaje de bajo nivel y es un acrónimo para "Portable Graphics Format". Fue Creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/).
+
+En palabras del Till:
+
+&gt; TikZ started out as a project to implement TEX graphics macros that can be used both with [pdfLATEX](http://www.math.rug.nl/~trentelman/jacob/pdflatex/pdflatex.html) and also with the classical
+([PostScript-based](https://en.wikipedia.org/wiki/PostScript)) LATEX. In other words, I wanted to implement a “portable graphics format” for TEX – hence the name pgf. These early macros are still around and they form the “basic layer” of the system described in this manual, but most of the interaction an author has theses days is with TikZ – which has become a whole language of its own.
+
+ &lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;4&lt;/sup&gt; TikZ se incorporó en la versión 1.10 de PGF&lt;/span&gt;
+
+---
+
+class: hide-row1-col1 hide-row3-col1 with-border 
+count: false
+
+hola2
+ 
+---
+
+class: hide-row1-col1 hide-row2-col1 with-border
+count: false
+
+hola3
+---
+layout: false
+---
+
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
