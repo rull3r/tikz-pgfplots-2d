@@ -141,12 +141,6 @@ En palabras del Till:
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-```{}
-#button {
-    border: none;
-}
-```
-
 hola2
  
 ---
