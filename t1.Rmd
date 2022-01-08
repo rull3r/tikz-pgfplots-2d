@@ -8,6 +8,7 @@ header-includes:
   - \usepackage{amsmath}
   - \usepackage{tikz}
   - \usepackage{pgfplots}
+  - \usepackage{pgf,tikz,pgfplots
 output:
   xaringan::moon_reader:
     css: ['default','default-fonts','shinobi',"ninjutsu",'ninpo']
@@ -22,6 +23,9 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(magick)
+library(pdftools)
+library(xfun)
 ```
 
 
@@ -141,14 +145,41 @@ En palabras del Till:
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-hola2
+TikZ tambien fue creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/) e incluido en una version posterior de PGF, TikZ es un acronimo de "TikZ ist kein Zeichenprogramm". TikZ no es el el unico paquete de Latex para generar grafcios pero definitivamente es el mas utilizado y el mas poderoso y practicamente usaremos solo TikZ, ya que e sla capa que le permite al usuario interactuar con PGF de forma mas amigable.
+
+
  
 ---
 
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-hola3
+PGF?, luego TIkZ, y ahora PGFPlots? ok, puede ser un poco confuso, vamos a recapitular. PGF es la base de todo TikZ. y PGFPlots esta basado en TikZ, Entonces cual usar? basicamente PGFPlots proporciona un ayuda considerable al momento de generar graficas utilizando formulas, o datos de entrrada y PGFPplots se encargada de el resto. Por Ejemplo
+
+```{}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[color=red]{exp(x)};
+\end{axis}
+\end{tikzpicture}
+```
+
+
+```{tikz, fig.cap = "Funky tikz", fig.ext = 'png'}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\definecolor{zzffzz}{rgb}{0.6,1,0.6}
+\definecolor{ffcctt}{rgb}{1,0.8,0.2}
+\definecolor{yqyqdz}{rgb}{0.5019607843137255,0.5019607843137255,0.8509803921568627}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.505289256198347,-6.316528925619829) rectangle (21.02198347107439,13.083471074380155);
+\draw [line width=2pt,pattern color=yqyqdz,fill=yqyqdz,fill opacity=0.25] (2,0) circle (3cm);
+\draw [line width=2pt,pattern color=ffcctt,fill=ffcctt,fill opacity=0.25] (6,0) circle (3cm);
+\draw [line width=2pt,pattern color=zzffzz,fill=zzffzz,fill opacity=0.25] (4,3.46415) circle (3cm);
+\end{tikzpicture}
+```
+
+
 ---
 layout: false
 ---

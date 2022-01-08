@@ -16,10 +16,10 @@
 class: center, middle, inverse, title-slide
 
 # PGFPLOTS/TIKZ
-## Un poco de historia
+## Un poco de History
 ### …
 ### …
-### (updated: 2022-01-07)
+### (updated: 2022-01-08)
 
 ---
 
@@ -143,20 +143,33 @@ En palabras del Till:
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-```{}
-#button {
-    border: none;
-}
-```
+TikZ tambien fue creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/) e incluido en una version posterior de PGF, TikZ es un acronimo de "TikZ ist kein Zeichenprogramm". TikZ no es el el unico paquete de Latex para generar grafcios pero definitivamente es el mas utilizado y el mas poderoso y practicamente usaremos solo TikZ, ya que e sla capa que le permite al usuario interactuar con PGF de forma mas amigable.
 
-hola2
+
  
 ---
 
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-hola3
+PGF?, luego TIkZ, y ahora PGFPlots? ok, puede ser un poco confuso, vamos a recapitular. PGF es la base de todo TikZ. y PGFPlots esta basado en TikZ, Entonces cual usar? basicamente PGFPlots proporciona un ayuda considerable al momento de generar graficas utilizando formulas, o datos de entrrada y PGFPplots se encargada de el resto. Por Ejemplo
+
+```{}
+\begin{tikzpicture}
+\begin{axis}
+\addplot[color=red]{exp(x)};
+\end{axis}
+\end{tikzpicture}
+```
+
+`\begin{tikzpicture}
+`\begin{axis}
+\addplot[color=red]{exp(x)};
+\end{axis}`
+\end{tikzpicture}`
+
+
+
 ---
 layout: false
 ---
