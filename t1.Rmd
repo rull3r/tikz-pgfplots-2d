@@ -1,6 +1,6 @@
 ---
 title: "PGFPLOTS/TIKZ"
-subtitle: "Un poco de historia"
+subtitle: "Un poco de History"
 author: "..."
 institute: "..."
 date: "(updated: `r Sys.Date()`)"
