@@ -1,6 +1,6 @@
 ---
 title: "PGFPLOTS/TIKZ"
-subtitle: "Un poco de History"
+subtitle: "A brief history"
 author: "..."
 institute: "..."
 date: "(updated: `r Sys.Date()`)"
@@ -37,7 +37,7 @@ class: split-33
 .column.bg-main1[.content[
   .split-three[
  .row[.content.center.vmiddle.reveal-text[
- # Porque $\LaTeX{}$?
+ # Why $\LaTeX{}$?
  ]]
   .row[.content.center.vmiddle.reveal-text[
   # $\TeX{}$
@@ -59,40 +59,40 @@ Define the layout and for sequence hide the appropriate cell.
 
 class: hide-row2-col1 hide-row3-col1 with-border
 
- $\LaTeX{}$<sup>1</sup> es una herremienta increible creada principalmente para escribir manuscritos cientificos o simplemente texto con un acabado profesional, sin la rigidez que ofrecen otros programas como el Odiado y Amado Microsoft Word, no hay puntos medios, o lo amas, o lo odias, supongo que ya sabes algo de latex y por eso estas leyendo esto, asi que sabras que latex no es solo para textos, se pueden hacer infitas cosas, este curso se basara en la graficacion, sin embargo, nunca esta de mas conocer mas sobre su historia antes de comenzar con el curso de graficacion en 2D, quiero mencionar tambien que supondre que tienes cierto conocimiente matematico, no me detendre en explicar, por ejemplo, que es una funcion polinomica, como encontrar las raices o demostrar el teorema fundamental del algebra, me enfocare solo en como puedes usar Latex para graficarlo practicamente todo... Comencemos
+ $\LaTeX{}$<sup>1</sup> is an incredible tool created mainly for writing scientific manuscripts or simply text with a professional look, without the rigidity that offer other programs like the hated and also loved Microsoft Word, there's no middle ground regarding this program, either you hated it or you love it, I suppose that you know some LaTeX and that's why you are reading this, thus, you know that latex is not just for text, there is an infinite amount of things that you can do in LaTeX. This course is based on graphing, nevertheless, it never hurts to know more about its history before starting with the 2D graphing course. I cannot neglect to mention that I will be assuming that you have certain mathematical knowledge, I will not stop for explaining this regard, for instance, what a polynomial function is, how to find the roots of such polynomial function or proving the fundamental theorem of algebra, I will be focusing just in explaining how to use LaTeX for graphing pretty much everything... Let's begin.
  
- <span class="footnote" style="text-align:left"><sup>1</sup> Esta forma tan particular de escribir se logra con `$\LaTeX{}$`</span>
+ <span class="footnote" style="text-align:left"><sup>1</sup> This particual form for writing is done by using `$\LaTeX{}$`</span>
 
 ---
 
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-Estoy seguro que haz escuchado mucho de Latex pero no de $\TeX{}$<sup>2</sup>, pero que es TeX?, Bueno es pocas palabras es con los que se contruyo Latex, es decir, podriamos decir, cuando ejecutamos una instruccion en Latex, TeX lo interpretara y generara lo que necesitamos, TeX fue desarrollado en 19xx despues de 8 a;os de trabajo por el gran [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) por que penso acertadamente que el necesitaba mejores lenguajes tipograficas para hacer las publicaciones cientificas, Knuth empezó a escribir TeX porque se sentía molesto con la calidad cada vez menor de la tipografía en los volúmenes I a III de su obra El arte de programar ordenadores. Empezó por ello a diseñar su propio lenguaje de tipografía. Pensó que podría acabarlo en su año sabático, 1978; se equivocó por tan solo ocho años. El lenguaje se finalizó y congeló (no se hicieron más modificaciones) alrededor de 1985.
+I am sure that you have heard a lot about LaTeX, but not about $\TeX{}$<sup>2</sup>, but what's TeX? Well, long story short, it is the tool which was used for building Latex, that is, we could say that when we execute an instruction in LaTeX, TeX interprets it and generates what we need, TeX was developed in 19xx after 8 years of work by the great [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) because he thought (correctly) that he needed better tipographic lenguages for developping scientific publishing, having that into account, Knuth started writing TeX for he felt upset with the decresing tipographic quality of the first to thrid volumes of his work "The Art of Computer Programming". For the latest reason, Knuth started to build his own typographic language, he thought that he could finish it in his sabbatical year, in 1978 to be specific; he was mistaken only by eight years. LaTeX was finally finished and frozen (no more modifications were made) around 1985.
 
-La primera versión de TeX se escribió usando el [lenguaje de programación SAIL](https://en.wikipedia.org/wiki/SAIL_(programming_language)) que se ejecutaba en una [PDP-10](https://en.wikipedia.org/wiki/PDP-10) en el sistema operativo WAITS de la Universidad de Stanford. Para las versiones posteriores de TeX, Knuth inventó el concepto de [programación literaria](https://en.wikipedia.org/wiki/Literate_programming), una forma de producir código fuente compilable y documentación con referencias de alta calidad (por supuesto, escrito en TeX) partiendo del mismo archivo original. El lenguaje usado se llama WEB y produce programas en [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)).
+The first TeX version was written using [SAIL programming lenguage](https://en.wikipedia.org/wiki/SAIL_(programming_language)) which was executed in a [PDP-10](https://en.wikipedia.org/wiki/PDP-10) in the operating system WAITS of Stanford University. For the following TeX versions, Knuth invented the concept of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), this represents a form of producing compiled source code and documentation with high quality references (written in TeX, of course) starting from the original file. The used language was called WEB and produces programs in [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)).
 
- <span class="footnote" style="text-align:left"><sup>2</sup> Esta forma tan particular de escribir se logra con `$\TeX{}$`</span>
+ <span class="footnote" style="text-align:left"><sup>2</sup> This particual way of writing is done by using `$\TeX{}$`</span>
  
 ---
 
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-Por otro lado Latex fue Creado en 1984 por [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) como un conjunto de Macros de TeX, y desde entonces poco a poco la comunidad lo ha ido actualizando actualmente estamos en la version latex2e<sup>3</sup>, su definicion oficial es LaTeX es un sistema de composición tipográfica de alta calidad; incluye funcionalidades diseñadas para la producción de documentación técnica y científica. pero no es solo eso, podemos desde crear animaciones, e inscrustar videos, los mas puristas no dicen que LaTeX es un lenguaje de programacion, pero una pequena parte de los conocedores si lo consideran un lenguaje de programacion, 
+On the other hand, LaTeX was created in 1984 by [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) as a set of TeX frames and, ever since, little by little the community has been updating it, so far we are in latex2e<sup>3</sup> version. The official definition of LaTeX is a high quality typographic composition system; it includes functionalities designed for the production of scientific and technical documents, although, LaTeX does not represent only that, we can create animation and embed video. We have to remark that the purists do not say that LaTeX is a programming language, however, a small part of the connoisseurs do consider LaTeX as a programming language. 
 
-Con LaTeX podemos separar el dise;o del documento con el contenido en dos archivos diferente. Alguien puede escribir el contenido a pesar de establecer el diseño en el proceso. En LaTeX, un autor trabaja en un editor de texto, escribiendo y especificando la estructura de una página. LaTeX realiza la composición tipográfica en el momento de la compilación para lidiar con la apariencia del documento. La separación de los dos procesos facilita el proceso y los usuarios pueden centrarse tanto en el estilo como en el contenido de forma individual.
+Using LaTeX we can separate the design of the document from the content in two different files. Someone in particular can write the content in despite establishing the design in the process. Using LaTeX, an author can work with a text editor, writing and specifying the structures of a page. LaTeX does the typographic composition during compiling in order to deal with the appearance of the document. Futhermore, The previous splitting processes make it easier for the users for them to get focus both in the style as well as the content individually.
 
-LaTeX ofrece cualquier tipo de solucion para cualquier usuario. Hay paquetes de todo tipo y para todos los gustos Estos son gratuitos y están diseñados para simplificar cualquier tarea compleja. Por ejemplo, el paquete [Bibtex](https://en.wikipedia.org/wiki/BibTeX) es altamente eficiente para los principales usuarios de LaTeX que trabajan en campos académicos e institutos de investigación. Ofrece gestión de bibliografía para una mejor representación de sus artículos. [Tikz y PGFPlots](https://en.wikipedia.org/wiki/PGF/TikZ) permite cualqueir tipo de graficos en 2D o 3D, Diagramas de Bloques. También hay una variedad de paquetes para componer partituras musicales y crucigramas, para elementos quimicos, lenguajes de programacion, animaciones, etc.
+LaTeX offers any sort of solution for any user. There are packages of any kind and for all tastes, these packages are free and they are designed for simplifying any kind of complex task. For instance, let us have in consideration the [Bibtex](https://en.wikipedia.org/wiki/BibTeX) package, which is highly efficient for the main LaTeX users who work in academic fields and research institutes. LaTeX offers bibliographic management for a better article representation. [Tikz and PGFPlots](https://en.wikipedia.org/wiki/PGF/TikZ) allow any kind of 2D or 3D graphics and block diagrams. There are also a great variety of packages for composing musical sheets, creating crossword puzzles, it provides packages for chemical elements, programming languages, animation, etc.
 
-La mayoría de la gente usa [Word](https://en.wikipedia.org/wiki/Microsoft_Word) para escribir y administrar el formato de un archivo de varias páginas. Desafortunadamente, no ofrecerá una experiencia agradable a muchos usuarios. Pero con LaTeX, uno puede dividir un documento enorme en muchos fragmentos más pequeños que luego pueden ser agregados automáticamente por LaTeX. Además, LaTeX permite al usuario crear fácilmente bibliografías, índices y tablas de contenido en varios archivos.
+The majority of people use [Word](https://en.wikipedia.org/wiki/Microsoft_Word) for writing and managing the format of a file that contains several pages. Unfortunately, Word will not offer a great experience for many users. Now, using LaTeX, we can divide huge documents in many little fragments that, later on, can be added automatically for LaTeX. Besides, LaTeX allows the users to create bibliography very easily, index and content tables in may files.
 
-Además de todas las otras funciones brillantes, LaTeX es gratis.
+Apart from all the other brilliant functionalities, we have to remark that LaTeX is completely free.
 
 <!-- para seguir animandote te mostrare a continuacion cosas que podras lograr al final de este curso -->
 
 
- <span class="footnote" style="text-align:left"><sup>3</sup> para saber mas acerca del proyecto visita su [pagina oficial](https://www.latex-project.org/) o su [repositorio oficial](https://github.com/latex3/latex2e)</span>
+ <span class="footnote" style="text-align:left"><sup>3</sup> For knowing more about the project, visit its [official page](https://www.latex-project.org/) or its [official repository](https://github.com/latex3/latex2e)</span>
 ---
 
 
@@ -133,21 +133,21 @@ Define the layout and for sequence hide the appropriate cell.
 
 class: hide-row2-col1 hide-row3-col1 with-border
 
-Que es PGF? no necesitas saber mucho de esto, ya que no lo usaras directamente, pero siempre es bueno saber estos terminos, en palabras muy generales podemos decir que PGF es el base de TikZ<sup>4</sup>, PGF es un lenguaje de bajo nivel y es un acrónimo para "Portable Graphics Format". Fue Creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/).
+What is PGF? We do not need to know a lot about this, this is because we will not use it directly, however, it is always good to know the terminology that involves our study, in general terms, we can say that PGF is the basis of TikZ<sup>4</sup>, PGF is a low level programming language and it is the acronym for "Portable Graphics Format". PGF was created by [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/).
 
-En palabras del Till:
+In Till own words, he said:
 
 > TikZ started out as a project to implement TEX graphics macros that can be used both with [pdfLATEX](http://www.math.rug.nl/~trentelman/jacob/pdflatex/pdflatex.html) and also with the classical
 ([PostScript-based](https://en.wikipedia.org/wiki/PostScript)) LATEX. In other words, I wanted to implement a “portable graphics format” for TEX – hence the name pgf. These early macros are still around and they form the “basic layer” of the system described in this manual, but most of the interaction an author has theses days is with TikZ – which has become a whole language of its own.
 
- <span class="footnote" style="text-align:left"><sup>4</sup> TikZ se incorporó en la versión 1.10 de PGF</span>
+ <span class="footnote" style="text-align:left"><sup>4</sup> TikZ was incorporated in PGF 1.10 version</span>
 
 ---
 
 class: hide-row1-col1 hide-row3-col1 with-border 
 count: false
 
-TikZ tambien fue creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/) e incluido en una version posterior de PGF, TikZ es un acronimo de "TikZ ist kein Zeichenprogramm". TikZ no es el el unico paquete de Latex para generar grafcios pero definitivamente es el mas utilizado y el mas poderoso y practicamente usaremos solo TikZ, ya que e sla capa que le permite al usuario interactuar con PGF de forma mas amigable.
+TikZ was also created by [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbeiter/tantau/) and included in a following version of PGF, TikZ is an acronym for "TikZ ist kein Zeichenprogramm". TikZ is not the only LaTeX package for generating graphics, but it is definitely the most used and powerful and, for our concern, we will be using TikZ exclusively, this is because is the only layout that allows the user to interact with PGF in a friendly manner.
 
 
  
