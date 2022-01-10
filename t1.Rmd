@@ -9,10 +9,12 @@ header-includes:
   - \usepackage{tikz}
   - \usepackage{pgfplots}
   - \usepackage{pgf,tikz,pgfplots
+  - \usepackage{wrapfig}
 output:
   xaringan::moon_reader:
     css: ['default','default-fonts','shinobi',"ninjutsu",'ninpo']
     lib_dir: libs
+    fig_caption: yes
     nature:
       highlightStyle: github
       highlightLines: true
@@ -46,7 +48,7 @@ class: split-33
  ]
 ]]
 
-.column.bg-main1[.content.left.justificacion.vmiddle[
+.column.bg-main1[.content.left.justificacion[
 {{content}}
 ]]
 
@@ -120,7 +122,7 @@ class: split-33
  ]
 ]]
 
-.column.bg-main1[.content.left.justificacion.vmiddle[
+.column.bg-main1[.content.left.justificacion[
 {{content}}
 ]]
 
@@ -154,7 +156,7 @@ TikZ tambien fue creado por [Till Tantau](https://www.tcs.uni-luebeck.de/mitarbe
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-PGF?, luego TIkZ, y ahora PGFPlots? ok, puede ser un poco confuso, vamos a recapitular. PGF es la base de todo TikZ. y PGFPlots esta basado en TikZ, Entonces cual usar? basicamente PGFPlots proporciona un ayuda considerable al momento de generar graficas utilizando formulas, o datos de entrrada y PGFPplots se encargada de el resto. Por Ejemplo
+PGF?, luego TIkZ, y ahora PGFPlots? ok, puede ser un poco confuso, vamos a recapitular. PGF es la base de todo TikZ. y PGFPlots esta basado en TikZ, Entonces cual usar? basicamente PGFPlots proporciona un ayuda considerable al momento de generar graficas utilizando formulas, o datos de entrrada y PGFPplots se encargada de el resto. Por Ejemplo, intentemos graficar $e^x$ 
 
 ```{}
 \begin{tikzpicture}
@@ -164,21 +166,39 @@ PGF?, luego TIkZ, y ahora PGFPlots? ok, puede ser un poco confuso, vamos a recap
 \end{tikzpicture}
 ```
 
+<div style="float:left;position: relative; padding:10px;width: 55%">
+```{r, echo=FALSE, fig.cap="Grafico de $e^x$", out.width = '100%'}
+knitr::include_graphics("t1_files/figure-html/fig1.png")
+```
+</div>
+Notamos que en el pequeno fragmento que no importa que no entiendas del todo en estos momentos, pero basicamente expcribimos la expresion explicitamente y PGFPlots se encarga de graficarla, incluso los ejes coordenados, este es el poder y la simplicidad que buscamos al momento de generar graficas de funciones y es una ventaja con respecto TikZ Puro.
 
-```{tikz, fig.cap = "Funky tikz", fig.ext = 'png'}
-\usetikzlibrary{arrows}
-\usetikzlibrary{patterns}
-\definecolor{zzffzz}{rgb}{0.6,1,0.6}
-\definecolor{ffcctt}{rgb}{1,0.8,0.2}
-\definecolor{yqyqdz}{rgb}{0.5019607843137255,0.5019607843137255,0.8509803921568627}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-\clip(-4.505289256198347,-6.316528925619829) rectangle (21.02198347107439,13.083471074380155);
-\draw [line width=2pt,pattern color=yqyqdz,fill=yqyqdz,fill opacity=0.25] (2,0) circle (3cm);
-\draw [line width=2pt,pattern color=ffcctt,fill=ffcctt,fill opacity=0.25] (6,0) circle (3cm);
-\draw [line width=2pt,pattern color=zzffzz,fill=zzffzz,fill opacity=0.25] (4,3.46415) circle (3cm);
+
+---
+
+class: hide-row1-col1 hide-row2-col1 with-border
+count: false
+
+Otro Ejemplo
+
+```{}
+\begin{tikzpicture}
+\begin{axis}
+\addplot3[
+    surf,
+]
+{exp(-x^2-y^2)*x};
+\end{axis}
 \end{tikzpicture}
 ```
 
+<div style="float:left;position: relative; padding:10px;width: 55%">
+```{r, echo=FALSE, fig.cap="Grafico de $e^{-x^2-y^2}x$", out.width = '100%'}
+knitr::include_graphics("t1_files/figure-html/fig2.png")
+```
+</div>
+
+Claro que podiamos aprovechar esto para funciones en $3D$ en este caso graficamos la funcion $e^\left(-x^2-y^2\right)x$.
 
 ---
 layout: false
