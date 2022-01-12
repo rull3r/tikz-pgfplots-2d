@@ -165,14 +165,48 @@ count: false
   \end{align} 
 \end{document}
 ```
-
+Copiamos este codigo y creando una hoja en blanco, pegamos el codigo y pulsaremos el boton `F5` para generar nuestro PDF
+```{r, echo=FALSE,fig.align='center',out.width = '40%'}
+knitr::include_graphics("t2_files/figure-html/gif3.gif")
+```
+Si podemos ver el documento compilado a nuestra derecha, entonces todo esta perfecto, sino, si presentas algun error, puedes enviarme un mensaje. no me enfocare mucho en el uso del IDE porque realmente es bastante comun... Crear documento nuevo, compilar, borrar documento, guardar, etc.
 ---
 class: hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux)
-3
+Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux) El uso de la linea de comandos en este tipo de sistemas operativos puede dar la impresion de que es mas complejo instalar programas, pero a mi parecer es mas sencillo. Si eres usuario frecuente de estos sistemas operativos, supongo que sabras que sulen varias sus metodos de instalacion, solo me enfocare en los 4 que considero mas comunes. y para proceder a la comprobacion, procedemos comolas diapostivias Windows
 
+Para [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+
+```{}
+# apt-get update
+# apt-get install texlive texlive-base
+```
+If you want the full $\LaTeX$ package run (Muchos GB de paquetes)
+```{}
+# apt-get install texlive-full
+```
+
+[Fedora](https://getfedora.org/):
+```{}
+# yum install texlive texlive-latex
+```
+[ArchLinux](https://archlinux.org/):
+```{}
+# pacman -S texlive-most
+```
+Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+```{}
+# apt-get install texstudio
+```
+[Fedora](https://getfedora.org/) y [ArchLinux](https://archlinux.org/) respectivamente:
+```{}
+# yum install texstudio
+```
+
+```{}
+# pacman -S texstudio
+```
 ---
 
 class: with-border bg-main1
