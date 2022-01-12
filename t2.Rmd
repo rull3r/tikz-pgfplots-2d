@@ -1,0 +1,34 @@
+---
+title: "PGFPLOTS/TIKZ"
+subtitle: "Inicios"
+author: "..."
+institute: "..."
+date: "(updated: `r Sys.Date()`)"
+header-includes: 
+  - \usepackage{amsmath}
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+output:
+  xaringan::moon_reader:
+    css: ['default','default-fonts','shinobi',"ninjutsu",'ninpo']
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      ratio: '16:9'
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(magick)
+library(pdftools)
+library(xfun)
+```
+
+---
+
+
+
+
