@@ -27,7 +27,104 @@ library(pdftools)
 library(xfun)
 ```
 
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4.center[Installation]
+]]
+
 ---
+
+layout: true
+class: split-20 with-border
+
+.column[
+  .split-four[
+  .row.bg-main1[.content.center.vmiddle[
+# Tools
+  ]]
+  .row.bg-main2[.content.center.vmiddle[
+# Windows
+  ]]
+  .row.bg-main3[.content.center.vmiddle[
+# Linux
+  ]]
+  .row.bg-main5[.content.center.vmiddle[
+# macOS
+  ]]
+]]
+
+.column[.content.left.justificacion[
+{{content}}
+]]
+
+
+
+---
+
+class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
+
+#### `Paquetes`
+
+Recordemos que $\LaTeX$ es un conjunto de instruccion de $\TeX$ entonces necesitamos algunas cosas, pero primero hay que definir como nos gusta trabajar
+
+#### `En la Nube`
+
+Una opcion muy popular para lo que empienzan en LaTeX es la opcion de Usar la nube, la mejor plataforma hoy en dia es [OverLeaf](www.overleaf.com), tiene sus propios tutoriales, miles de plantillas, se puede trabajar en equipo con otros editores en latex, entre muchas otras cosas positiva que nos brinda la tecnologia de la Nube
+
+#### `Entorno Local`
+
+Dependiendo de tu sistema operativo la forma de instalar puede variar pero siempre vamos a necesitar descargar e instalar todos los paquetes para poder y utilizar LaTex, actualmente hay de unas version basica y unas version full.
+
+Luego deberiamos instalar un [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), para trabajar de forma mas amigable, ya que el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) que viene por defecto es bastante arcaico y puedo no gustar a todos, en mi opinion el que mas me gusta y he usado siempre es el [TeXstudio](https://www.texstudio.org/) otro que se ha popularizado bastante es el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) [LyX](https://www.lyx.org/) es bueno, pero en mi opnion no lo recomimendo ya que, si bien promete redactar documentos de forma [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) la cual puede parecer bueno, pero no sabras que pasa tras camaras, y es sumamente importante saber eso.
+
+Te dejare aqui una [Lista de Editores de $\TeX$](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) con cada una de las carecteristicas
+
+#### `PDF`
+
+Uno de los objetivos finales es poder crear tu precioso [PDF](https://en.wikipedia.org/wiki/PDF). por lo tanto puede parecer obvio pero tambien necesitas un lector de [PDF](https://en.wikipedia.org/wiki/PDF).
+
+---
+
+class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
+
+#### `Referencias`
+
+Ya para Usuarios mas avanzados o para documentos mas elebarados tenemos herramientas para el uso de las referencias, una de las mas famosas es el [JabRef](https://www.jabref.org/). Esta herramienta permite generar guardar, actualizar y documentas nuestras referencias, sin embargo, para que Latex pueda usarla necesitaremos incluir alguna de las liberias de LaTeX que existen para el manejo y formateo de las referencia en el [PDF](https://en.wikipedia.org/wiki/PDF) final.
+
+#### `Otros`
+
+Mucha gente no lo sabe pero Latex puede Generar otro tipo de Archivos como los [.ps](https://en.wikipedia.org/wiki/PostScript), para esto existe [GPL Ghostscript y GSview](http://pages.cs.wisc.edu/~ghost/). y tambien existe [Dia](http://dia-installer.de/index.html.es) que es un programita muy sencillo para realizar imagenes directamente en [.eps](https://en.wikipedia.org/wiki/Encapsulated_PostScript)
+
+#### `Sistemas Operativos`
+Puedes pasar directamente aqui a las dispositivas donde te explico como instalar $\LaTex$ dependiendo de tu sistema operativo
+
+
+---
+
+class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+count: false
+
+Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
+2
+---
+
+class: hide-row4-col1 with-border bg-main1
+count: false
+
+Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux)
+3
+
+---
+
+class: bg-main1
+count: false
+
+Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [macOS](https://en.wikipedia.org/wiki/MacOS)
+<br>
+
+
+
 
 
 
