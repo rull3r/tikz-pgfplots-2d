@@ -97,27 +97,85 @@ Ya para Usuarios mas avanzados o para documentos mas elebarados tenemos herramie
 Mucha gente no lo sabe pero Latex puede Generar otro tipo de Archivos como los [.ps](https://en.wikipedia.org/wiki/PostScript), para esto existe [GPL Ghostscript y GSview](http://pages.cs.wisc.edu/~ghost/). y tambien existe [Dia](http://dia-installer.de/index.html.es) que es un programita muy sencillo para realizar imagenes directamente en [.eps](https://en.wikipedia.org/wiki/Encapsulated_PostScript)
 
 #### `Sistemas Operativos`
-Puedes pasar directamente aqui a las dispositivas donde te explico como instalar $\LaTex$ dependiendo de tu sistema operativo
-
+Evidentemente los paquetes de latex estan disponibles para todos los sistemas operativos
 
 ---
 
 class: hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
-2
+Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
+
+Para este sistema operativo existe [`MikTeX`](https://en.wikipedia.org/wiki/MiKTeX)
+
+**Step 1)** Descargar mediante este [link](https://miktex.org/download), recomiendo la version basica 64 bits ya que contiene todo lo que necesitamos
+```{r, echo=FALSE,fig.align='center',out.width = '40%'}
+knitr::include_graphics("t2_files/figure-html/fig9.png")
+```
+
+**Step 2)** Procedemos con la instalacion la cual es bastante comun, solo hay que tener en cuenta que en un punto te va a preguntar si deseamos instalar los paquetes directamente de la nube y le damos que SI, ver siguiente animacion
+
+```{r, echo=FALSE,fig.align='center',out.width = '35%'}
+knitr::include_graphics("t2_files/figure-html/gif1.gif")
+```
+
 ---
 
+class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+count: false
+
+**Step 3)** Descargando el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), el que usare es [TeXstudio](https://www.texstudio.org/), para esto nos vamos a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
+```{r, echo=FALSE,fig.align='center',out.width = '35%'}
+knitr::include_graphics("t2_files/figure-html/fig16.png")
+```
+**Step 4)** La instalacion es aun mas sencilla, aunque las alarmas de Windows pueden arrojarte una advertenia, pero no te preocupes como se muestra acontinuacion:
+```{r, echo=FALSE,fig.align='center',out.width = '35%'}
+knitr::include_graphics("t2_files/figure-html/gif2.gif")
+```
+---
+class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+count: false
+**Step 5)** Vamos a comprobar nuestra instalacion, vamos a usar un peque;o fragmento de codigo para generar un pdf basico
+
+```{}
+\documentclass{article} % Starts an article
+\usepackage{amsmath} % Imports amsmath
+\title{\LaTeX} % Title
+
+\begin{document} % Begins a document
+  \maketitle
+  \LaTeX{} is a document preparation system for
+  the \TeX{} typesetting program. It offers
+  programmable desktop publishing features and
+  extensive facilities for automating most
+  aspects of typesetting and desktop publishing,
+  including numbering and  cross-referencing,
+  tables and figures, page layout,
+  bibliographies, and much more. \LaTeX{} was
+  originally written in 1984 by Leslie Lamport
+  and has become the  dominant method for using
+  \TeX; few people write in plain \TeX{} anymore.
+  The current version is \LaTeXe.
+
+  % This is a comment, not shown in final output.
+  % The following shows typesetting  power of LaTeX:
+  \begin{align}
+    E_0 &= mc^2 \\
+    E &= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+  \end{align} 
+\end{document}
+```
+
+---
 class: hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux)
+Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux)
 3
 
 ---
 
-class: bg-main1
+class: with-border bg-main1
 count: false
 
 Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [macOS](https://en.wikipedia.org/wiki/MacOS)
