@@ -123,6 +123,8 @@
 .remark-code {
   font-size: 10px;
   line-height: 1.25;
+  overflow-y: auto;
+  max-height: 220px;
 }
 
 .remark-code-line-highlighted {

@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## A brief history
 ### …
 ### …
-### (updated: 2022-01-10)
+### (updated: 2022-01-11)
 
 ---
 
@@ -176,7 +176,7 @@ Notamos que en el pequeno fragmento que no importa que no entiendas del todo en 
 class: hide-row1-col1 hide-row2-col1 with-border
 count: false
 
-Otro Ejemplo
+Vamos a intentar graficar algo en tres dimension:
 
 ```{}
 \begin{tikzpicture}
@@ -191,15 +191,340 @@ Otro Ejemplo
 
 &lt;div style="float:left;position: relative; padding:10px;width: 55%"&gt;
 &lt;div class="figure"&gt;
-&lt;img src="t1_files/figure-html/fig2.png" alt="Grafico de `\(e^{-x^2-y^2}x\)`" width="100%" /&gt;
-&lt;p class="caption"&gt;Grafico de `\(e^{-x^2-y^2}x\)`&lt;/p&gt;
+&lt;img src="t1_files/figure-html/fig2.png" alt="Grafico de `\(xe^{-x^2-y^2}\)`" width="100%" /&gt;
+&lt;p class="caption"&gt;Grafico de `\(xe^{-x^2-y^2}\)`&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-Claro que podiamos aprovechar esto para funciones en `\(3D\)` en este caso graficamos la funcion `\(e^\left(-x^2-y^2\right)x\)`.
+Claro que podemos aprovechar esto para funciones en `tres dimension` en este caso graficamos la funcion. `\(xe^{-x^2-y^2}\)`
 
 ---
+
 layout: false
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4.center[Examples]
+.font2.center[Voy a mostrar algunos ejemplos que aprenderas aqui en el curso.]
+]]
+---
+
+layout: true
+class: split-33 with-border
+
+.column[
+  .split-five[
+  .row.bg-main1[.content.center.vmiddle[
+## Angulos
+  ]]
+  .row.bg-main2[.content.center.vmiddle[
+## Geometria
+  ]]
+  .row.bg-main3[.content.center.vmiddle[
+## Complex Plane
+  ]]
+  .row.bg-main5[.content.center.vmiddle[
+## Multiple Plots
+  ]]
+  .row[.content.center.vmiddle[
+## Basics Plots
+  ]]
+]]
+
+.column[.content.left.justificacion[
+{{content}}
+]]
+
+
+
+---
+
+class: hide-row2-col1 hide-row3-col1 hide-row4-col1 hide-row5-col1 with-border bg-main1
+
+```{}
+% Truncated Cone
+% Author: Mathias Magdowski
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{tikzpicture}
+	\draw[dashed,color=gray] (0,0) arc (-90:90:0.5 and 1.5);% right half of the left ellipse
+	\draw[semithick] (0,0) -- (4,1);% bottom line
+	\draw[semithick] (0,3) -- (4,2);% top line
+	\draw[semithick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
+	\draw[semithick] (4,1.5) ellipse (0.166 and 0.5);% right ellipse
+	\draw (-1,1.5) node {$\varnothing d_1$};
+	\draw (3.3,1.5) node {$\varnothing d_2$};
+	\draw[|-,semithick] (0,-0.5) -- (4,-0.5);
+	\draw[|-&gt;,semithick] (4,-0.5) -- (4.5,-0.5);
+	\draw (0,-1) node {$x=0$};
+	\draw (4,-1) node {$x=l$};
+\end{tikzpicture}
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig3.png" alt="The graphic shows a truncated cone. The diameter of the cone changes from `\(d_1\)` to `\(d_2\)` along the x-direction." width="50%" /&gt;
+&lt;p class="caption"&gt;The graphic shows a truncated cone. The diameter of the cone changes from `\(d_1\)` to `\(d_2\)` along the x-direction.&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+---
+
+class: hide-row3-col1 hide-row4-col1 hide-row5-col1 with-border bg-main1
+count: false
+
+```{}
+% Pythagorean triangle with the squares
+% Author: Alex Chan
+\documentclass{article}
+\usepackage{tikz}
+\newcommand{\pythagwidth}{3cm}
+\newcommand{\pythagheight}{2cm}
+
+\begin{document}
+\begin{tikzpicture}
+  \coordinate [label={below right:$A$}] (A) at (0, 0);
+  \coordinate [label={above right:$B$}] (B) at (0, \pythagheight);
+  \coordinate [label={below left:$C$}] (C) at (-\pythagwidth, 0);
+  
+  \coordinate (D1) at (-\pythagheight, \pythagheight + \pythagwidth);
+  \coordinate (D2) at (-\pythagheight - \pythagwidth, \pythagwidth);
+  
+  \draw [very thick] (A) -- (C) -- (B) -- (A);
+  
+  \newcommand{\ranglesize}{0.3cm}
+  \draw (A) -- ++ (0, \ranglesize) -- ++ (-\ranglesize, 0) -- ++ (0, -\ranglesize);
+  
+  \draw [dashed] (A) -- node [below] {$b$} ++ (-\pythagwidth, 0)
+          -- node [right] {$b$} ++ (0, -\pythagwidth)
+          -- node [above] {$b$} ++ (\pythagwidth, 0)
+          -- node [left]  {$b$} ++ (0, \pythagwidth);
+          
+  \draw [dashed] (A) -- node [right] {$c$} ++ (0,\pythagheight)%
+          -- node [below] {$c$} ++ (\pythagheight, 0)
+          -- node [left]  {$c$} ++ (0, -\pythagheight)
+          -- node [above] {$c$} ++ (-\pythagheight, 0);
+          
+  \draw [dashed] (C) -- node [above left]  {$a$} (B)
+          -- node [below left]  {$a$} (D1)
+          -- node [below right] {$a$} (D2)
+          -- node [above right] {$a$} (C);
+\end{tikzpicture}
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig4.png" alt="Pythagorean triangle with the squares of its sides and labels" width="37%" /&gt;
+&lt;p class="caption"&gt;Pythagorean triangle with the squares of its sides and labels&lt;/p&gt;
+&lt;/div&gt;
+---
+
+class: hide-row4-col1 hide-row5-col1 with-border bg-main1
+count: false
+
+```{}
+% Drawing a circle in the complex plane
+% Author: Martin Scharrer
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \begin{scope}[thick,font=\scriptsize]
+    % Axes:
+    % Are simply drawn using line with the `-&gt;` option to make them arrows:
+    % The main labels of the axes can be places using `node`s:
+    \draw [-&gt;] (-5,0) -- (5,0) node [above left]  {$\Re\{z\}$};
+    \draw [-&gt;] (0,-5) -- (0,5) node [below right] {$\Im\{z\}$};
+
+    % Axes labels:
+    % Are drawn using small lines and labeled with `node`s. The placement can be set using options
+    \iffalse% Single
+    % If you only want a single label per axis side:
+    \draw (1,-3pt) -- (1,3pt)   node [above] {$1$};
+    \draw (-1,-3pt) -- (-1,3pt) node [above] {$-1$};
+    \draw (-3pt,1) -- (3pt,1)   node [right] {$i$};
+    \draw (-3pt,-1) -- (3pt,-1) node [right] {$-i$};
+    \else% Multiple
+    % If you want labels at every unit step:
+    \foreach \n in {-4,...,-1,1,2,...,4}{%
+        \draw (\n,-3pt) -- (\n,3pt)   node [above] {$\n$};
+        \draw (-3pt,\n) -- (3pt,\n)   node [right] {$\n i$};
+    }
+    \fi
+    \end{scope}
+    % The circle is drawn with `(x,y) circle (radius)`
+    % You can draw the outer border and fill the inner area differently.
+    % Here I use gray, semitransparent filling to not cover the axes below the circle
+    \path [draw=none,fill=gray,semitransparent] (+1,-1) circle (3);
+    % Place the equation into the circle:
+    \node [below right,darkgray] at (+1,-1) {$|z-1+i| \leq 3$};
+\end{tikzpicture}
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig5.png" alt="Circle in the complex plane" width="45%" /&gt;
+&lt;p class="caption"&gt;Circle in the complex plane&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+class: hide-row5-col1 with-border bg-main1
+count: false
+
+```{}
+% Linear regression
+% Author: Henri Menke
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{arrows,intersections}
+\begin{document}
+\begin{tikzpicture}[
+    thick,
+    &gt;=stealth',
+    dot/.style = {
+      draw,
+      fill = white,
+      circle,
+      inner sep = 0pt,
+      minimum size = 4pt
+    }
+  ]
+  \coordinate (O) at (0,0);
+  \draw[-&gt;] (-0.3,0) -- (8,0) coordinate[label = {below:$x$}] (xmax);
+  \draw[-&gt;] (0,-0.3) -- (0,5) coordinate[label = {right:$f(x)$}] (ymax);
+  \path[name path=x] (0.3,0.5) -- (6.7,4.7);
+  \path[name path=y] plot[smooth] coordinates {(-0.3,2) (2,1.5) (4,2.8) (6,5)};
+  \scope[name intersections = {of = x and y, name = i}]
+    \fill[gray!20] (i-1) -- (i-2 |- i-1) -- (i-2) -- cycle;
+    \draw      (0.3,0.5) -- (6.7,4.7) node[pos=0.8, below right] {Sekante};
+    \draw[red] plot[smooth] coordinates {(-0.3,2) (2,1.5) (4,2.8) (6,5)};
+    \draw (i-1) node[dot, label = {above:$P$}] (i-1) {} -- node[left]
+      {$f(x_0)$} (i-1 |- O) node[dot, label = {below:$x_0$}] {};
+    \path (i-2) node[dot, label = {above:$Q$}] (i-2) {} -- (i-2 |- i-1)
+      node[dot] (i-12) {};
+    \draw           (i-12) -- (i-12 |- O) node[dot,
+                              label = {below:$x_0 + \varepsilon$}] {};
+    \draw[blue, &lt;-&gt;] (i-2) -- node[right] {$f(x_0 + \varepsilon) - f(x_0)$}
+                              (i-12);
+    \draw[blue, &lt;-&gt;] (i-1) -- node[below] {$\varepsilon$} (i-12);
+    \path       (i-1 |- O) -- node[below] {$\varepsilon$} (i-2 |- O);
+    \draw[gray]      (i-2) -- (i-2 -| xmax);
+    \draw[gray, &lt;-&gt;] ([xshift = -0.5cm]i-2 -| xmax) -- node[fill = white]
+      {$f(x_0 + \varepsilon)$}  ([xshift = -0.5cm]xmax);
+  \endscope
+\end{tikzpicture}
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig6.png" alt="Linear regression" width="45%" /&gt;
+&lt;p class="caption"&gt;Linear regression&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: hide-row5-col1 with-border bg-main1
+count: false
+
+```{}
+% Brillouin Function
+% Author: Mark Wibrow
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\directlua{
+function coth (i) 
+  return math.cosh(i) / math.sinh(i)
+end
+
+function brillouin (J, x) 
+  if x == 0 then
+    return 0
+  else
+   return (2*J+1)/(2*J)*coth((2*J+1)/(2*J)*x) - 
+        1/(2*J)*coth(1/(2*J)*x)
+  end
+end
+}
+\pgfmathdeclarefunction{Brillouin}{2}{%
+  \edef\pgfmathresult{%
+     \directlua{tex.print("" .. brillouin(#1,#2))}%
+   }%  
+}
+\begin{document}
+\begin{tikzpicture}[
+    x                = 2cm/10,
+    scale            = 3,
+    axis/.style      = {help lines, -{Stealth[length = 1.5ex]}},
+    brillouin/.style = {domain = -5:10, samples = 100}
+  ]
+  \draw [axis] (-5,0) -- (10,0);
+  \draw [axis] (0,-1) -- (0,1.5);
+  \draw [densely dotted] (0,{ Brillouin(1, 100)} ) -- ++(10,0);
+  \draw [red]   plot [brillouin] (\x, { Brillouin(1,  \x)});
+  \draw [green] plot [brillouin] (\x, { Brillouin(5,  \x)});
+  \draw [blue]  plot [brillouin] (\x, { Brillouin(50, \x)});
+  \node [align = center, anchor = west] at (1,1.3) {%
+    $\begin{alignedat}{2}
+      B_J(x) &amp;= \tfrac{2J + 1}{2J}
+                &amp;&amp;\coth \left ( \tfrac{2J + 1}{2J} x \right ) \\
+             &amp;\quad - \tfrac{1}{2J}
+                &amp;&amp;\coth \left ( \tfrac{1}{2J} x \right )
+     \end{alignedat}$};
+\end{tikzpicture}
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig7.png" alt="Brillouin Function" width="45%" /&gt;
+&lt;p class="caption"&gt;Brillouin Function&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: bg-main1
+count: false
+
+En este Proximo ejemplo podremos apreciar la diferencia del `\addplot` del paquete en PGFPlots y la sentencia `\draw` dentro de Tikz, Los ejes coordenados entre otras cosas no se generan automaticamente utilizando TikZ puro 
+
+```{}
+% Author: Till Tantau
+% Source: The PGF/TikZ manual
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+
+% GNUPLOT required
+\begin{document}
+\pagestyle{empty}
+
+
+\begin{tikzpicture}[domain=0:4]
+    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+    \draw[-&gt;] (-0.2,0) -- (4.2,0) node[right] {$x$};
+    \draw[-&gt;] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red] plot[id=x] function{x} 
+        node[right] {$f(x) =x$};
+    \draw[color=blue] plot[id=sin] function{sin(x)} 
+        node[right] {$f(x) = \sin x$};
+    \draw[color=orange] plot[id=exp] function{0.05*exp(x)} 
+        node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+
+
+\end{document}
+```
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="t1_files/figure-html/fig8.png" alt="Graficas de `\(f(x)=x\)`, `\(f(x)=e^x\)`, `\(f(x)=sin(x)\)`" width="34%" /&gt;
+&lt;p class="caption"&gt;Graficas de `\(f(x)=x\)`, `\(f(x)=e^x\)`, `\(f(x)=sin(x)\)`&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+---
+
+layout: false
+
 ---
 
 
