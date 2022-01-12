@@ -213,19 +213,19 @@ class: split-33 with-border
 .column[
   .split-five[
   .row.bg-main1[.content.center.vmiddle[
-## Angulos
+# Angulos
   ]]
   .row.bg-main2[.content.center.vmiddle[
-## Geometria
+# Geometria
   ]]
   .row.bg-main3[.content.center.vmiddle[
-## Complex Plane
+# Complex Plane
   ]]
   .row.bg-main5[.content.center.vmiddle[
-## Multiple Plots
+# Multiple Plots
   ]]
   .row[.content.center.vmiddle[
-## Basics Plots
+# Basics Plots
   ]]
 ]]
 
@@ -518,7 +518,13 @@ knitr::include_graphics("t1_files/figure-html/fig8.png")
 
 layout: false
 
----
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4.center[The End]
+]]
+
+
 
 
 
