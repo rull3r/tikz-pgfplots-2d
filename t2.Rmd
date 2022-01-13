@@ -1,6 +1,6 @@
 ---
 title: "PGFPLOTS/TIKZ"
-subtitle: "Inicios"
+subtitle: "The beginning"
 author: "..."
 institute: "..."
 date: "(updated: `r Sys.Date()`)"
@@ -64,56 +64,56 @@ class: split-20 with-border
 
 class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 
-#### `Paquetes`
+#### `Packages`
 
-Recordemos que $\LaTeX$ es un conjunto de instruccion de $\TeX$ entonces necesitamos algunas cosas, pero primero hay que definir como nos gusta trabajar
+Let's remember that $\LaTeX$ is a set of $\TeX$ instructions, therefore, we need to know some things before starting, in this way, we need to define how we like to work
 
-#### `En la Nube`
+#### `In the Cloud`
 
-Una opcion muy popular para lo que empienzan en LaTeX es la opcion de Usar la nube, la mejor plataforma hoy en dia es [OverLeaf](www.overleaf.com), tiene sus propios tutoriales, miles de plantillas, se puede trabajar en equipo con otros editores en latex, entre muchas otras cosas positiva que nos brinda la tecnologia de la Nube
+A very popular option for beginners in LaTeX is the option to use the cloud, the best platform today is [OverLeaf](www.overleaf.com), it has its own tutorials, thousands of templates, you can work as a team with other editors in latex, among many other positive things that Cloud technology offers us
 
-#### `Entorno Local`
+#### `Local Environment`
 
-Dependiendo de tu sistema operativo la forma de instalar puede variar pero siempre vamos a necesitar descargar e instalar todos los paquetes para poder y utilizar LaTex, actualmente hay de unas version basica y unas version full.
+Depending on your operating system, the way to install $\LaTeX$ may vary, however, we will always need to download and install all the packages to be able to use LaTeX. Currently there is a basic version and a full version.
 
-Luego deberiamos instalar un [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), para trabajar de forma mas amigable, ya que el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) que viene por defecto es bastante arcaico y puedo no gustar a todos, en mi opinion el que mas me gusta y he usado siempre es el [TeXstudio](https://www.texstudio.org/) otro que se ha popularizado bastante es el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) [LyX](https://www.lyx.org/) es bueno, pero en mi opnion no lo recomimendo ya que, si bien promete redactar documentos de forma [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) la cual puede parecer bueno, pero no sabras que pasa tras camaras, y es sumamente importante saber eso.
+Later, we should install an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), to work in a more friendly way, since the [IDE](https://en.wikipedia.org/wiki/ Integrated_development_environment) that comes by default is quite archaic and may not be liked by everyone, in my opinion, the one that I like the most and that I have always used is [TeXstudio](https://www.texstudio.org/) another one that is has become quite popular is the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) [LyX](https://www.lyx.org/) , which I must admit is good, but in my opnion, I do not recommend it since, although it promises to write documents in [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) format, it has its technical disadvantages, since it hides many of the most powerful features that the environment $\LaTeX$ offers and therefore, you will not know what happens behind the scenes.
 
-Te dejare aqui una [Lista de Editores de $\TeX$](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) con cada una de las carecteristicas
+I will leave you here a [List of Editors of $\TeX$](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) with each of the characteristics
 
 #### `PDF`
 
-Uno de los objetivos finales es poder crear tu precioso [PDF](https://en.wikipedia.org/wiki/PDF). por lo tanto puede parecer obvio pero tambien necesitas un lector de [PDF](https://en.wikipedia.org/wiki/PDF).
+One of the ultimate goals is to be able to create your precious [PDF](https://en.wikipedia.org/wiki/PDF). Thus, it may seem obvious but you also need a [PDF](https://en.wikipedia.org/wiki/PDF) reader.
 
 ---
 
 class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 
-#### `Referencias`
+#### `References`
 
-Ya para Usuarios mas avanzados o para documentos mas elebarados tenemos herramientas para el uso de las referencias, una de las mas famosas es el [JabRef](https://www.jabref.org/). Esta herramienta permite generar guardar, actualizar y documentas nuestras referencias, sin embargo, para que Latex pueda usarla necesitaremos incluir alguna de las liberias de LaTeX que existen para el manejo y formateo de las referencia en el [PDF](https://en.wikipedia.org/wiki/PDF) final.
+For more advanced users (or for more elaborate documents) we have tools for the use of references, one of the most famous is [JabRef](https://www.jabref.org/). Tthe aforementioned tool allows us to generate, save, update and document our references, however, in order for Latex to be able to use it properly, we will need to include some of the LaTeX libraries that exist for handling and formatting references in the final [PDF](https:/ /en.wikipedia.org/wiki/PDF).
 
-#### `Otros`
+#### `Other`
 
-Mucha gente no lo sabe pero Latex puede Generar otro tipo de Archivos como los [.ps](https://en.wikipedia.org/wiki/PostScript), para esto existe [GPL Ghostscript y GSview](http://pages.cs.wisc.edu/~ghost/). y tambien existe [Dia](http://dia-installer.de/index.html.es) que es un programita muy sencillo para realizar imagenes directamente en [.eps](https://en.wikipedia.org/wiki/Encapsulated_PostScript)
+Many people don't know it but Latex can generate other types of files such as [.ps](https://en.wikipedia.org/wiki/PostScript), for the latter we have [GPL Ghostscript and GSview](http://pages .cs.wisc.edu/~ghost/). and there is also [Dia](http://dia-installer.de/index.html.es) which is a very simple program to make images directly in [.eps](https://en.wikipedia.org/wiki /Encapsulated_PostScript)
 
-#### `Sistemas Operativos`
-Evidentemente los paquetes de latex estan disponibles para todos los sistemas operativos
+#### `Operating Systems`
+Obviously latex packages are available for all operating systems
 
 ---
 
 class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
+Let's begin to install each of the tools to correctly use $\LaTeX$ in [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
 
-Para este sistema operativo existe [`MikTeX`](https://en.wikipedia.org/wiki/MiKTeX)
+For this operating system there is [`MikTeX`](https://en.wikipedia.org/wiki/MiKTeX)
 
-**Step 1)** Descargar mediante este [link](https://miktex.org/download), recomiendo la version basica 64 bits ya que contiene todo lo que necesitamos
+**Step 1)** Download through this [link](https://miktex.org/download). I recommend the basic 64 bits version, since it contains everything we need
 ```{r, echo=FALSE,fig.align='center',out.width = '40%'}
 knitr::include_graphics("t2_files/figure-html/fig9.png")
 ```
 
-**Step 2)** Procedemos con la instalacion la cual es bastante comun, solo hay que tener en cuenta que en un punto te va a preguntar si deseamos instalar los paquetes directamente de la nube y le damos que SI, ver siguiente animacion
+**Step 2)** We proceed with the installation, which is quite standard, we just have to take into account that at one point it will ask you if we want to install the packages directly from the cloud, to which we proceed affirmatively, and then we continue with ``next'' .
 
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/gif1.gif")
@@ -124,11 +124,11 @@ knitr::include_graphics("t2_files/figure-html/gif1.gif")
 class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-**Step 3)** Descargando el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), el que usare es [TeXstudio](https://www.texstudio.org/), para esto nos vamos a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
+**Step 3)** Downloading the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), the one I will use is [TeXstudio](https://www.texstudio.org/), for this, we go to this [link ](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/fig16.png")
 ```
-**Step 4)** La instalacion es aun mas sencilla, aunque las alarmas de Windows pueden arrojarte una advertenia, pero no te preocupes como se muestra acontinuacion:
+**Step 4)** Installation is even easier (although Windows alarms may throw you a warning, but don't worry, it's just protocol), as it is shown below:
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/gif2.gif")
 ```
@@ -137,7 +137,7 @@ knitr::include_graphics("t2_files/figure-html/gif2.gif")
 class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-**Step 5)** Vamos a comprobar nuestra instalacion, vamos a usar un peque;o fragmento de codigo para generar un pdf basico
+**Step 5)** We are going to check our installation, we are going to use a small piece of code to generate a basic pdf
 
 ```{}
 \documentclass{article} % Starts an article
@@ -167,18 +167,18 @@ count: false
   \end{align} 
 \end{document}
 ```
-Copiamos este codigo y creando una hoja en blanco, pegamos el codigo y pulsaremos el boton `F5` para generar nuestro PDF
+Copy this code and create a blank sheet, paste the code on the file and then press `F5` button to generate our PDF.
 ```{r, echo=FALSE,fig.align='center',out.width = '40%'}
 knitr::include_graphics("t2_files/figure-html/gif3.gif")
 ```
-Si podemos ver el documento compilado a nuestra derecha, entonces todo esta perfecto, sino, si presentas algun error, puedes enviarme un mensaje. no me enfocare mucho en el uso del IDE porque realmente es bastante comun... Crear documento nuevo, compilar, borrar documento, guardar, etc.
+If we can see the compiled document on our right, then everything is fine, if not, if you have some errors, you can send me a message. I will not focus too much on the use of the IDE because it's really quite common: Create new document, compile, delete document, save, etc.
 ---
 class: hide-row1-col1 hide-row2-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux) El uso de la linea de comandos en este tipo de sistemas operativos puede dar la impresion de que es mas complejo instalar programas, pero a mi parecer es mas sencillo. Si eres usuario frecuente de estos sistemas operativos, supongo que sabras que sulen varias sus metodos de instalacion, solo me enfocare en los 4 que considero mas comunes. y para proceder a la comprobacion, procedemos comolas diapostivias Windows
+Let's start installing each of the tools to correctly use $\LaTeX$ on [Linux](https://en.wikipedia.org/wiki/Linux). The use of the terminal in this type of operating system can give the impression that it is even more complex to install programs, however, in my opinion, it is way easier. If you are a frequent user of these operating systems, I suppose you know that their installation methods usually vary, I will only focus on the four methods that I consider that they are mostly used. To proceed with the verification, we proceed as explained in the Windows slides
 
-Para [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+For [Debian ](https://www.debian.org/index.en.html) and [Ubuntu](https://ubuntu.com/):
 
 ```{}
 # apt-get update
@@ -197,11 +197,11 @@ If you want the full $\LaTeX$ package run (Muchos GB de paquetes)
 ```{}
 # pacman -S texlive-most
 ```
-Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+for installing [TeXstudio](https://www.texstudio.org/) in [Debian ](https://www.debian.org/index.en.html) and [Ubuntu](https://ubuntu.com/):
 ```{}
 # apt-get install texstudio
 ```
-[Fedora](https://getfedora.org/) y [ArchLinux](https://archlinux.org/) respectivamente:
+[Fedora](https://getfedora.org/) and [ArchLinux](https://archlinux.org/) respectively:
 ```{}
 # yum install texstudio
 ```
@@ -214,16 +214,16 @@ Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.d
 class: hide-row1-col1 hide-row2-col1 hide-row3-col1 with-border bg-main1
 count: false
 
-Para los usuarios de $\LaTeX$ en [macOS](https://en.wikipedia.org/wiki/MacOS) puedes seguir esta [Guia Oficial](https://tug.org/mactex/)
+For $\LaTeX$ users on [macOS](https://en.wikipedia.org/wiki/MacOS) you can go to the following [Official](https://tug.org/mactex/)
 
-Para inslatar [TeXstudio](https://www.texstudio.org/) debemos ir a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-osx.dmg)
+To install [TeXstudio](https://www.texstudio.org/) we must go to this [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2 .0-osx.dmg)
 <br>
 ---
 layout: false
 class: bg-main1 center middle hide-slide-number
 
 .reveal-text.bg-main2[.pad1[
-.font4.center[Partes de un Documento Latex]
+.font4.center[Parts of a LaTeX Document]
 ]]
 ---
 layout: true
@@ -232,7 +232,7 @@ class: split-20 with-border
 .column[
   .split-two[
   .row.bg-main1[.content.center.vmiddle.reveal-text[
-# Preambulo
+# Preamble
   ]]
   .row.bg-main2[.content.center.vmiddle.reveal-text[
 # Entorno<br>Documento
@@ -249,7 +249,7 @@ class: split-20 with-border
 
 class: hide-row2-col1 with-border bg-main1
 
-Antes de comenzar a meternos completamente en el mundo de PGFPlots/TIKZ primero vamos a entender linea por linea un documento basico de $\LaTeX$, para eso usaremos el siguiente codigo:
+Before we start diving fully into the world of PGFPlots/TIKZ, we must first understand (line by line) a basic $\LaTeX$ document, for that, we will use the following code:
 
 ```{}
 \documentclass{article}
@@ -266,7 +266,7 @@ Antes de comenzar a meternos completamente en el mundo de PGFPlots/TIKZ primero 
 	\end{tikzpicture}
 \end{document}
 ```
-Lo primero que tenemos que conocer es el preambulo es donde hacemos todos los cambios de forma general, importamos librerias, y generamos que clase de documentos queremos general, incluso podemos crear diapositivas, todo esto se hace desde el preambulo que es todo lo que va antes de la linea `\begin{document}`
+The first thing we have to know is the preamble where we make all the changes, where we import libraries and generate the kind of documents we want, we can even create slides, all this is done from the preamble, which represents everything that goes before the line `\begin{document}`
 ---
 
 class: hide-row2-col1 with-border bg-main1
@@ -287,7 +287,7 @@ class: hide-row2-col1 with-border bg-main1
 	\end{tikzpicture}
 \end{document}
 ```
-Como podemos ver, en el preambulo tenemos las lineas de codigo que estan remarcadas.
+In the preamble, as we can notice, we can read the lines of code that are highlighted.
 
 ---
 
@@ -309,7 +309,7 @@ class: hide-row2-col1 with-border bg-main1
 	\end{tikzpicture}
 \end{document}
 ```
-La linea `\documentclass{article}` establece la clase del documento, existen muchas clases, incluso nosotros mismo podemos clases, pero es un tema que el excede el contenido de este curso, entre las clases mas usadas estan:
+The `\documentclass{article}` line establishes the document class, there are many classes, we can even define classes ourselves, but it is a topic that exceeds the content of this course. Among the most used classes we can see the following:
 
 * `article` for articles in scientific journals, presentations, short reports, program documentation, invitations, ...
 * `report` for longer reports containing several chapters, small books, thesis, ...
@@ -317,11 +317,11 @@ La linea `\documentclass{article}` establece la clase del documento, existen muc
 * `beamer` For writing presentations.
 * `standalone` bundle allows users to easily place picture environments or other material in own source files and compile these on their own or as part of a main document. A special standalone class is provided for use with such files, which by default crops the resulting output file to the content
 
-debo decir que cada una puede recibir como parametros caracteristicas propias para ser modificiadas, dentro de `[...]`
+I must say that each one can receive its own characteristics as parameters to be modified within `[...]`
 
-por ejemplo `\documentclass[12pt,twocolumn]{article}` estable una clase de documento tipo `article` con una tama;o de letra de `12pt` y todas las paginas seran de `dos columnas`
+For example `\documentclass[12pt,twocolumn]{article}` sets a document class of type `article` with a font size of `12pt` and all pages will be `two column`
 
-otro ejemplo es `\documentclass[twoside, openright]{report}`. `openright` always starts a chapter on the right (odd pages), leaving one page blank in case the last paragraph of the previous chapter ended on an odd page. It only works and makes sense with the twoside option set. The openany option starts the chapter on the next page (even or odd).
+Another example is `\documentclass[twoside, openright]{report}`. `openright` always starts a chapter on the right (odd pages), leaving one page blank in case the last paragraph of the previous chapter ended on an odd page. It only works and makes sense with the twoside option set. The open any option starts the chapter on the next page (even or odd).
 
 The `openany`, `openright` options are not available in article as it does not support `\chapter`!
 ---
@@ -344,16 +344,16 @@ class: hide-row2-col1 with-border bg-main1
 	\end{tikzpicture}
 \end{document}
 ```
-Lo otro que podemos ver aqui es la instruccion para importar paquetes `\usepackage{...}`, existen literalmente miles y miles de paquetes de latex que nos permitiran hacer practicamente todo lo que nos imaginemos, sin embargo, en este estamos importando 2, el paquete [amsmath](https://ctan.org/pkg/amsmath) es de los mas importante ya que contiene todo lo referente a la tipografica matematica (formulas, matrices, etc.), el otro paquete que cargad es nuestro amado [tikz](https://tikz.net/) que ya no necesita presentacion... 
+The other thing that we can see here is the instruction to import packages `\usepackage{...}`, there are literally thousands and thousands of latex packages that will allow us to do practically everything we can imagine, however, in this case, we are importing two packages, the package [amsmath](https://ctan.org/pkg/amsmath) is one of the most important since it contains everything related to mathematical typography (formulas, matrices, etc.), the other package that we are loading is our beloved [tikz](https://tikz.net/) who no longer needs an introduction...
 
-Puede que un futuro tengas que realizar un reporte sobre [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) y tengas que generar uno, entonces te convendra usar el paquete `cwpuzzle` de la siguiente forma `\usepackage{crossword}` para poder generar crucigramas<sup>1</sup>
+Maybe in the future you have to make a report on [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) and you have to generate one, then you should use the `cwpuzzle` package as follows ` \usepackage{crossword}` to be able to generate crosswords<sup>1</sup>
  
-Puedes cargar tantos paquetes como quieras, si dentro de los miles de paquetes no encuentras uno que haga lo que necesites, siempre puedes crear uno, aunque es un tema basatante avanzado
+You can load as many packages as you want, if among the thousands of packages you don't find one that does what you need, you can always create one, although it is a fairly advanced topic
 
-Evidentemente esto no es todo lo que podemos hacer en el preambulo, podemos redefenir elementos globales de nuestro documento, por ejemplo, If you don't want any indent, anywhere in your document, add `\setlength{\parindent}{0pt}` in your document preamble.
+Obviously, this is not all we can do in the preamble, we can redefine global elements of our document, for example, If you don't want any indent, anywhere in your document, add `\setlength{\parindent}{0pt} ` in your document preamble.
 
-Usalmente el titulo del documento y la fecha se especifican tambien en el preambulo. 
-<span class="footnote" style="text-align:left"><sup>1</sup>Si de verdad quieres hacer un [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) puedes leer la documentacion oficial del paquete `cwpuzzle` [aqui](http://mirrors.ctan.org/macros/latex/contrib/gene/crossword/cwpuzzle.pdf) y una muy buena explicacion [aqui](https://tex.stackexchange.com/questions/44775/how-to-create-a-crossword-puzzle-in-latex) </span>
+Usually the title of the document and the date are also specified in the preamble. 
+<span class="footnote" style="text-align:left"><sup>1</sup>If you really want to do a [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) you can read the official documentation package `cwpuzzle` [here](http://mirrors.ctan.org/macros/latex/contrib/gene/crossword/cwpuzzle.pdf) and also a great explanation [here](https://tex.stackexchange.com/questions/44775/how-to-create-a-crossword-puzzle-in-latex) </span>
 ---
 
 class: hide-row1-col1 with-border bg-main1
