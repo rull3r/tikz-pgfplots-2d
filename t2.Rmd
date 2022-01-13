@@ -374,7 +374,7 @@ count: false
 	{{\end{tikzpicture}}}
 {{\end{document}}}
 ```
-Basicamente el entorno del documento es todo lo que esta dentro las lineas `\begin{document}` y `\end{document}`, y lo podemos definir como todo el contenido de nuestro documento, aqui escribiras los parrafos, secciones, capitulos, insertaras las imagenes, tablas, etc.
+Basically the environment of the document is everything that is inside the lines `\begin{document}` and `\end{document}`, and we can define it as all the content of our document, here you will write the paragraphs, sections, chapters , you will insert the images, tables, etc.
 <br>
 
 ---
@@ -397,13 +397,13 @@ count: false
 	{{\end{tikzpicture}}}
 \end{document}
 ```
-Basicamente el entorno del documento es todo lo que esta dentro las lineas `\begin{document}` y `\end{document}`, y lo podemos definir como todo el contenido de nuestro documento, aqui escribiras los parrafos, secciones, capitulos, insertaras las imagenes, tablas, etc.
+Basically the environment of the document is everything that is inside the lines `\begin{document}` and `\end{document}`, and we can define it as all the content of our document, here you will write the paragraphs, sections, chapters , you will insert the images, tables, etc.
 
-Lo unico que esta generando este documento es un elemento del paquete TikZ, estos elementos siempre comienzan con `\begin{tikzpicture}` y terminan con `\end{tikzpicture}` hay algo tenemos que preguntarnos antes de comenzar con este entorno, vamos a graficar una funcion, o vamos a hacer un grafico general(grafo, una figura geometria, diagramas, etc)? tikz recibe opciones de la siguiente forma `\begin{tikzpicture}[option1,option2,...]` de modo que si vamos a generar graficos de funciones es conveniente especificar un domino, en nuestro ejemplo el dominio es `[domain=0:5*pi/3]`, es decir, $x\in\left(0,\frac{5\pi}{3}\right)$
+The only thing that is generating this document is an element from the TikZ package, these elements always start with `\begin{tikzpicture}` and end with `\end{tikzpicture}`. There is something we have to ask ourselves before starting with this environment. Are we going to graph a function or are we going to make a general graph (graph, geometry figure, diagrams, etc)? tikz receives options in the following form `\begin{tikzpicture}[option1,option2,...]` so if we are going to generate function pictures it is convenient to specify a domain, in our example the domain is `[domain=0 :5*pi/3]`, i.e. $x\in\left(0,\frac{5\pi}{3}\right)$
 
-Si no requerimo de un dominio, podemos omitir esta opcion, esto hara que el entorno `tikzpicture` nos genere un lienzo donde mediante coordenadas podremos especificar que dibujar y cuando 
+If we do not require a domain, we can omit this option, this will make the `tikzpicture` environment generate a canvas where we can specify what to draw and when to use coordinates.
 
-Recuerda que esto es ina introduccion en proximo capitulos ya profundizaremos mas acerca de esto.
+Remember that this is an introduction, in next chapters we will deepen more about this.
 ---
 
 class: hide-row1-col1 with-border bg-main1
@@ -424,18 +424,18 @@ count: false
 	\end{tikzpicture}
 \end{document}
 ```
-Casi todos los lenguajes estan dise;ado para que las instrucciones puedan leerse, como si de un libro de tratase, y TikZ no es la excepcion.
+Almost all languages are designed so that the instructions can be read, as if from a book, and TikZ is no exception.
 
 <div style="float:left;position: relative; padding:3px;width: 20%">
 ```{r, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("t2_files/figure-html/fig25.png")
 ```
 </div>
-La linea que esta subyarada la podemos leer como "dibuja una muy delgada y de color gris malla desde la coordenada $(x_{\text{inicial}},y_{\text{inicial}})$ hasta la coordenada $(x_{\text{final}},y_{\text{final}})$" recordemos que el eje $x$ es el eje horizontal y en este ejemplo va desde $(x_{\text{inicial}},x_{\text{final}}) = (-0.1,2\pi)$ de manera analoga, el eje $y$ va esta en vertical y va desde $(y_{\text{inicial}},y_{\text{final}}) = (-1.1,2\pi)$, entonces la malla se va a graficar en toda el area limitada por el cuadrado, cuyos puntos son: $(-0.1,-1.1), (-0.1,2\pi), (2\pi,2\pi), (2\pi,-1.1)$ 
+The line that is underlined can be read as "draw a very thin gray line from coordinate $(x_{\text{initial}},y_{\text{initial}})$ to coordinate $(x_{\ text{final}},y_{\text{final}})$" let's remember that the axis $x$ is the horizontal axis and in this example it goes from $(x_{\text{initial}},x_{\text{ end}}) = (-0.1,2\pi)$. Analogously, the $y$ axis is vertical and goes from $(y_{\text{initial}},y_{\text{final}}) = (-1.1,2\pi)$, so the mesh will be plotted in the entire area bounded by the square, whose points are: $(-0.1,-1.1), (-0.1,2\pi), (2\pi,2\pi), (2\pi, -1.1)$
 
-Si, la grafica de la izquierda es lo que buscamos, esta realizada asi, para notar algo, las grafica de $f(x) = \frac{1}{20} e^x$ excede el dominio, esto los hice para que notemos que el dominio solo influye sobre la grafica de la funcion que estamos generando, no tiene que ver con los puntos estamos utilizando en `\draw`, mediante el mallado.<sup>2</sup>
+Yes, the graph on the left is what we are looking for, it is made like this, to notice something, the graph of $f(x) = \frac{1}{20} e^x$ exceeds the domain, I did this so that we notice that the domain only influences the graph of the function that we are generating, it has nothing to do with the points that we are using in `\draw` through meshing.<sup>2</sup>
 
-<span class="footnote" style="text-align:left"><sup>2</sup>Como practica intenta arreglar el codigo, de modo que el mallado que hicimos cubra totalmente todas las funciones, ademas, haz que las lineas del mallado sean mas opacas</span>
+<span class="footnote" style="text-align:left"><sup>2</sup>As a practical exercise, try to fix the code such as the mesh that we did covers the entire functions, besides that, make the mesh lines more opaque </span>
 
 ---
 
@@ -462,9 +462,9 @@ count: false
 knitr::include_graphics("t2_files/figure-html/fig26.png")
 ```
 </div>
-Siguiendo con nuestra analogia al lenguaje natural, la instruccion `\draw[->] (-0.2,0) -- (2*pi,0) node[right] {$x$};` podemos leerla como "dibujar una fleca desde la coordenada $(x_{\text{inicial}},y_{\text{inicial}})$ hasta la coordenada $(x_{\text{final}},y_{\text{final}})$ que tendra por nombre $x$ y se ubicara a la derecha", aqui tenemos que tener en considerar el elemento `node[right]` si lo ponemos al lado derecho de la coordenada le indicara a esa coordenada donde colocar el nombre, en este caso a la derecha, si quisieramos dar un nombre a la coordenada inicial, tendremos que colocar el nodo a la izquierda, de la siguiente forma `\draw[->] node[left] {$0$} (-0.2,0) -- (2*pi,0) node[right] {$x$};` y con esto le decimos que contruya una flecha tal y como anteriormente pero que en la coordenada inicial coloque a la izquierza coloque $0$, la mejor forma de ver esto es en la practica, asi que intenta colocar algun nombre al inicio de las coordenadas, la instruccion `node[...]` recibe una posicionamiento, las mas usadas son left, right, above, below.<sup>3</sup>
+Following our natural language analogy, the statement `\draw[->] (-0.2,0) -- (2*pi,0) node[right] {$x$};` can be read as "draw an arrow from the coordinate $(x_{\text{initial}},y_{\text{initial}})$ to the coordinate $(x_{\text{final}},y_{\text{final}})$ that will have by name $x$ and it will be located to the right", here we have to take into consideration the element `node[right]`, if we put it to the right side of the coordinate, the program will indicate to that coordinate where to place the name, in this case to the right. If we wanted to give the initial coordinate a name, we would have to place the node on the left, as follows `\draw[->] node[left] {$0$} (-0.2,0) -- (2*pi ,0) node[right] {$x$};` and with this we tell it to build an arrow as shown above with the exception that in the initial coordinate it places $0$ on the left. The best way to see the above is practice, so try to put some name at the beginning of the coordinates, the `node[...]` instruction receives a positioning, the most used are left, right, above, below.< top>3</top>
 
-<span class="footnote" style="text-align:left"><sup>3</sup>Ademas de completar el ejercicio de la diapositiva anterior, intenta dar un nombre a las coordenadas iniciales, cualquier nombre, e intenta posicionarlo de forma agradable a la vista</span>
+<span class="footnote" style="text-align:left"><sup>3</sup>In addition to completing the exercise on the previous slide, try to give the initial coordinates a name, any name, and try to position it in a way that is pleasing to the eye.</span>
 
 ---
 
@@ -491,9 +491,9 @@ count: false
 knitr::include_graphics("t2_files/figure-html/fig27.png")
 ```
 </div>
-Finalmente tenemos las formulas, la cual creo que esta muy claro tambien, sin embargo, la instrucion `\draw[color=red] plot (\x,\x) node[right] {$f(x) =x$}` se puede leer como "dibuja de color rojo la grafica evaluada en el dominio, y al final agregar el nombre $f(x) =x$ a la derecha". Observa como la sentencia `plot` toma 2 parametros (dominio, funcion), y con eso basta es suficiente para graficar.<sup>4</sup>
+Finally we have the formulas, which I think is pretty clear too, however, the statement `\draw[color=red] plot (\x,\x) node[right] {$f(x) =x$}` can be read as "draw the graph evaluated in the domain in red, and at the end add the name $f(x) =x$ to the right". Notice how the `plot` statement takes 2 parameters (domain, function), and that is enough to plot.<sup>4</sup>
 
-<span class="footnote" style="text-align:left"><sup>3</sup>Intenta graficar las siguiente funciones, $tan(x)$, $x^2$ y $ln(x)$ en verda, marron y morado respectivamente</span>
+<span class="footnote" style="text-align:left"><sup>3</sup>Try to graph the following functions: $tan(x)$, $x^2$ y $ln(x)$ in green, brown and violet, respectively.</span>
 
 ---
 
