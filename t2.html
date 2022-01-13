@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## Inicios
 ### …
 ### …
-### (updated: 2022-01-12)
+### (updated: 2022-01-13)
 
 ---
 
@@ -39,16 +39,16 @@ class: split-20 with-border
 
 .column[
   .split-four[
-  .row.bg-main1[.content.center.vmiddle[
+  .row.bg-main1[.content.center.vmiddle.reveal-text[
 # Tools
   ]]
-  .row.bg-main2[.content.center.vmiddle[
+  .row.bg-main2[.content.center.vmiddle.reveal-text[
 # Windows
   ]]
-  .row.bg-main3[.content.center.vmiddle[
+  .row.bg-main3[.content.center.vmiddle.reveal-text[
 # Linux
   ]]
-  .row.bg-main5[.content.center.vmiddle[
+  .row.bg-main5[.content.center.vmiddle.reveal-text[
 # macOS
   ]]
 ]]
@@ -100,7 +100,7 @@ Evidentemente los paquetes de latex estan disponibles para todos los sistemas op
 
 ---
 
-class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
 Comencemos a instalar cada una de la herramientas para usar correctemente `\(\LaTeX\)` en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
@@ -116,7 +116,7 @@ Para este sistema operativo existe [`MikTeX`](https://en.wikipedia.org/wiki/MiKT
 
 ---
 
-class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
 **Step 3)** Descargando el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), el que usare es [TeXstudio](https://www.texstudio.org/), para esto nos vamos a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
@@ -124,8 +124,10 @@ count: false
 **Step 4)** La instalacion es aun mas sencilla, aunque las alarmas de Windows pueden arrojarte una advertenia, pero no te preocupes como se muestra acontinuacion:
 &lt;img src="t2_files/figure-html/gif2.gif" width="35%" style="display: block; margin: auto;" /&gt;
 ---
-class: hide-row3-col1 hide-row4-col1 with-border bg-main1
+
+class: hide-row1-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
+
 **Step 5)** Vamos a comprobar nuestra instalacion, vamos a usar un peque;o fragmento de codigo para generar un pdf basico
 
 ```{}
@@ -160,7 +162,7 @@ Copiamos este codigo y creando una hoja en blanco, pegamos el codigo y pulsaremo
 &lt;img src="t2_files/figure-html/gif3.gif" width="40%" style="display: block; margin: auto;" /&gt;
 Si podemos ver el documento compilado a nuestra derecha, entonces todo esta perfecto, sino, si presentas algun error, puedes enviarme un mensaje. no me enfocare mucho en el uso del IDE porque realmente es bastante comun... Crear documento nuevo, compilar, borrar documento, guardar, etc.
 ---
-class: hide-row4-col1 with-border bg-main1
+class: hide-row1-col1 hide-row2-col1 hide-row4-col1 with-border bg-main1
 count: false
 
 Comencemos a instalar cada una de la herramientas para usar correctemente `\(\LaTeX\)` en [Linux](https://en.wikipedia.org/wiki/Linux) El uso de la linea de comandos en este tipo de sistemas operativos puede dar la impresion de que es mas complejo instalar programas, pero a mi parecer es mas sencillo. Si eres usuario frecuente de estos sistemas operativos, supongo que sabras que sulen varias sus metodos de instalacion, solo me enfocare en los 4 que considero mas comunes. y para proceder a la comprobacion, procedemos comolas diapostivias Windows
@@ -198,15 +200,301 @@ Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.d
 ```
 ---
 
-class: with-border bg-main1
+class: hide-row1-col1 hide-row2-col1 hide-row3-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas de para usar correctemente `\(\LaTeX\)` en [macOS](https://en.wikipedia.org/wiki/MacOS)
+Para los usuarios de `\(\LaTeX\)` en [macOS](https://en.wikipedia.org/wiki/MacOS) puedes seguir esta [Guia Oficial](https://tug.org/mactex/)
+
+Para inslatar [TeXstudio](https://www.texstudio.org/) debemos ir a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-osx.dmg)
+&lt;br&gt;
+---
+layout: false
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4.center[Partes de un Documento Latex]
+]]
+---
+layout: true
+class: split-20 with-border
+
+.column[
+  .split-two[
+  .row.bg-main1[.content.center.vmiddle.reveal-text[
+# Preambulo
+  ]]
+  .row.bg-main2[.content.center.vmiddle.reveal-text[
+# Entorno&lt;br&gt;Documento
+  ]]
+]]
+
+.column[.content.left.justificacion[
+{{content}}
+]]
+
+
+
+---
+
+class: hide-row2-col1 with-border bg-main1
+
+Antes de comenzar a meternos completamente en el mundo de PGFPlots/TIKZ primero vamos a entender linea por linea un documento basico de `\(\LaTeX\)`, para eso usaremos el siguiente codigo:
+
+```{}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+Lo primero que tenemos que conocer es el preambulo es donde hacemos todos los cambios de forma general, importamos librerias, y generamos que clase de documentos queremos general, incluso podemos crear diapositivas, todo esto se hace desde el preambulo que es todo lo que va antes de la linea `\begin{document}`
+---
+
+class: hide-row2-col1 with-border bg-main1
+
+
+
+```latex
+*\documentclass{article}
+*\usepackage{amsmath}
+*\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+Como podemos ver, en el preambulo tenemos las lineas de codigo que estan remarcadas.
+
+---
+
+class: hide-row2-col1 with-border bg-main1
+
+
+
+```latex
+*\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+La linea `\documentclass{article}` establece la clase del documento, existen muchas clases, incluso nosotros mismo podemos clases, pero es un tema que el excede el contenido de este curso, entre las clases mas usadas estan:
+
+* `article` for articles in scientific journals, presentations, short reports, program documentation, invitations, ...
+* `report` for longer reports containing several chapters, small books, thesis, ...
+* `book` for real books
+* `beamer` For writing presentations.
+* `standalone` bundle allows users to easily place picture environments or other material in own source files and compile these on their own or as part of a main document. A special standalone class is provided for use with such files, which by default crops the resulting output file to the content
+
+debo decir que cada una puede recibir como parametros caracteristicas propias para ser modificiadas, dentro de `[...]`
+
+por ejemplo `\documentclass[12pt,twocolumn]{article}` estable una clase de documento tipo `article` con una tama;o de letra de `12pt` y todas las paginas seran de `dos columnas`
+
+otro ejemplo es `\documentclass[twoside, openright]{report}`. `openright` always starts a chapter on the right (odd pages), leaving one page blank in case the last paragraph of the previous chapter ended on an odd page. It only works and makes sense with the twoside option set. The openany option starts the chapter on the next page (even or odd).
+
+The `openany`, `openright` options are not available in article as it does not support `\chapter`!
+---
+
+class: hide-row2-col1 with-border bg-main1
+
+
+
+```latex
+\documentclass{article}
+*\usepackage{amsmath}
+*\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+Lo otro que podemos ver aqui es la instruccion para importar paquetes `\usepackage{...}`, existen literalmente miles y miles de paquetes de latex que nos permitiran hacer practicamente todo lo que nos imaginemos, sin embargo, en este estamos importando 2, el paquete [amsmath](https://ctan.org/pkg/amsmath) es de los mas importante ya que contiene todo lo referente a la tipografica matematica (formulas, matrices, etc.), el otro paquete que cargad es nuestro amado [tikz](https://tikz.net/) que ya no necesita presentacion... 
+
+Puede que un futuro tengas que realizar un reporte sobre [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) y tengas que generar uno, entonces te convendra usar el paquete `cwpuzzle` de la siguiente forma `\usepackage{crossword}` para poder generar crucigramas&lt;sup&gt;1&lt;/sup&gt;
+ 
+Puedes cargar tantos paquetes como quieras, si dentro de los miles de paquetes no encuentras uno que haga lo que necesites, siempre puedes crear uno, aunque es un tema basatante avanzado
+
+Evidentemente esto no es todo lo que podemos hacer en el preambulo, podemos redefenir elementos globales de nuestro documento, por ejemplo, If you don't want any indent, anywhere in your document, add `\setlength{\parindent}{0pt}` in your document preamble.
+
+Usalmente el titulo del documento y la fecha se especifican tambien en el preambulo. 
+&lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;1&lt;/sup&gt;Si de verdad quieres hacer un [crossword puzzle](https://en.wikipedia.org/wiki/Crossword) puedes leer la documentacion oficial del paquete `cwpuzzle` [aqui](http://mirrors.ctan.org/macros/latex/contrib/gene/crossword/cwpuzzle.pdf) y una muy buena explicacion [aqui](https://tex.stackexchange.com/questions/44775/how-to-create-a-crossword-puzzle-in-latex) &lt;/span&gt;
+---
+
+class: hide-row1-col1 with-border bg-main1
+count: false
+
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+*\begin{document}
+*	\begin{tikzpicture}[domain=0:5*pi/3] 
+*		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+*		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+*		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+*		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+*		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+*		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+*	\end{tikzpicture}
+*\end{document}
+```
+Basicamente el entorno del documento es todo lo que esta dentro las lineas `\begin{document}` y `\end{document}`, y lo podemos definir como todo el contenido de nuestro documento, aqui escribiras los parrafos, secciones, capitulos, insertaras las imagenes, tablas, etc.
 &lt;br&gt;
 
+---
+
+class: hide-row1-col1 with-border bg-main1
+count: false
 
 
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+*	\begin{tikzpicture}[domain=0:5*pi/3] 
+*		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+*		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$}; 
+*		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+*		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$}; 
+*		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+*		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+*	\end{tikzpicture}
+\end{document}
+```
+Basicamente el entorno del documento es todo lo que esta dentro las lineas `\begin{document}` y `\end{document}`, y lo podemos definir como todo el contenido de nuestro documento, aqui escribiras los parrafos, secciones, capitulos, insertaras las imagenes, tablas, etc.
 
+Lo unico que esta generando este documento es un elemento del paquete TikZ, estos elementos siempre comienzan con `\begin{tikzpicture}` y terminan con `\end{tikzpicture}` hay algo tenemos que preguntarnos antes de comenzar con este entorno, vamos a graficar una funcion, o vamos a hacer un grafico general(grafo, una figura geometria, diagramas, etc)? tikz recibe opciones de la siguiente forma `\begin{tikzpicture}[option1,option2,...]` de modo que si vamos a generar graficos de funciones es conveniente especificar un domino, en nuestro ejemplo el dominio es `[domain=0:5*pi/3]`, es decir, `\(x\in\left(0,\frac{5\pi}{3}\right)\)`
+
+Si no requerimo de un dominio, podemos omitir esta opcion, esto hara que el entorno `tikzpicture` nos genere un lienzo donde mediante coordenadas podremos especificar que dibujar y cuando 
+
+Recuerda que esto es ina introduccion en proximo capitulos ya profundizaremos mas acerca de esto.
+---
+
+class: hide-row1-col1 with-border bg-main1
+count: false
+
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+*		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$};
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+Casi todos los lenguajes estan dise;ado para que las instrucciones puedan leerse, como si de un libro de tratase, y TikZ no es la excepcion.
+
+&lt;div style="float:left;position: relative; padding:3px;width: 20%"&gt;
+&lt;img src="t2_files/figure-html/fig25.png" width="100%" /&gt;
+&lt;/div&gt;
+La linea que esta subyarada la podemos leer como "dibuja una muy delgada y de color gris malla desde la coordenada `\((x_{\text{inicial}},y_{\text{inicial}})\)` hasta la coordenada `\((x_{\text{final}},y_{\text{final}})\)`" recordemos que el eje `\(x\)` es el eje horizontal y en este ejemplo va desde `\((x_{\text{inicial}},x_{\text{final}}) = (-0.1,2\pi)\)` de manera analoga, el eje `\(y\)` va esta en vertical y va desde `\((y_{\text{inicial}},y_{\text{final}}) = (-1.1,2\pi)\)`, entonces la malla se va a graficar en toda el area limitada por el cuadrado, cuyos puntos son: `\((-0.1,-1.1), (-0.1,2\pi), (2\pi,2\pi), (2\pi,-1.1)\)` 
+
+Si, la grafica de la izquierda es lo que buscamos, esta realizada asi, para notar algo, las grafica de `\(f(x) = \frac{1}{20} e^x\)` excede el dominio, esto los hice para que notemos que el dominio solo influye sobre la grafica de la funcion que estamos generando, no tiene que ver con los puntos estamos utilizando en `\draw`, mediante el mallado.&lt;sup&gt;2&lt;/sup&gt;
+
+&lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;2&lt;/sup&gt;Como practica intenta arreglar el codigo, de modo que el mallado que hicimos cubra totalmente todas las funciones, ademas, haz que las lineas del mallado sean mas opacas&lt;/span&gt;
+
+---
+
+class: hide-row1-col1 with-border bg-main1
+count: false
+
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+*		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$};
+*		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+&lt;div style="float:left;position: relative; padding:3px;width: 20%"&gt;
+&lt;img src="t2_files/figure-html/fig26.png" width="100%" /&gt;
+&lt;/div&gt;
+Siguiendo con nuestra analogia al lenguaje natural, la instruccion `\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$};` podemos leerla como "dibujar una fleca desde la coordenada `\((x_{\text{inicial}},y_{\text{inicial}})\)` hasta la coordenada `\((x_{\text{final}},y_{\text{final}})\)` que tendra por nombre `\(x\)` y se ubicara a la derecha", aqui tenemos que tener en considerar el elemento `node[right]` si lo ponemos al lado derecho de la coordenada le indicara a esa coordenada donde colocar el nombre, en este caso a la derecha, si quisieramos dar un nombre a la coordenada inicial, tendremos que colocar el nodo a la izquierda, de la siguiente forma `\draw[-&gt;] node[left] {$0$} (-0.2,0) -- (2*pi,0) node[right] {$x$};` y con esto le decimos que contruya una flecha tal y como anteriormente pero que en la coordenada inicial coloque a la izquierza coloque `\(0\)`, la mejor forma de ver esto es en la practica, asi que intenta colocar algun nombre al inicio de las coordenadas, la instruccion `node[...]` recibe una posicionamiento, las mas usadas son left, right, above, below.&lt;sup&gt;3&lt;/sup&gt;
+
+&lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;3&lt;/sup&gt;Ademas de completar el ejercicio de la diapositiva anterior, intenta dar un nombre a las coordenadas iniciales, cualquier nombre, e intenta posicionarlo de forma agradable a la vista&lt;/span&gt;
+
+---
+
+class: hide-row1-col1 with-border bg-main1
+count: false
+
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[domain=0:5*pi/3] 
+		\draw[very thin,color=gray] (-0.1,-1.1) grid (2*pi,2*pi);
+		\draw[-&gt;] (-0.2,0) -- (2*pi,0) node[right] {$x$};
+		\draw[-&gt;] (0,-1.2) -- (0,2*pi) node[above] {$f(x)$};
+*		\draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+*		\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$}; 
+*		\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+	\end{tikzpicture}
+\end{document}
+```
+&lt;div style="float:left;position: relative; padding:3px;width: 20%"&gt;
+&lt;img src="t2_files/figure-html/fig27.png" width="100%" /&gt;
+&lt;/div&gt;
+Finalmente tenemos las formulas, la cual creo que esta muy claro tambien, sin embargo, la instrucion `\draw[color=red] plot (\x,\x) node[right] {$f(x) =x$}` se puede leer como "dibuja de color rojo la grafica evaluada en el dominio, y al final agregar el nombre `\(f(x) =x\)` a la derecha". Observa como la sentencia `plot` toma 2 parametros (dominio, funcion), y con eso basta es suficiente para graficar.&lt;sup&gt;4&lt;/sup&gt;
+
+&lt;span class="footnote" style="text-align:left"&gt;&lt;sup&gt;3&lt;/sup&gt;Intenta graficar las siguiente funciones, `\(tan(x)\)`, `\(x^2\)` y `\(ln(x)\)` en verda, marron y morado respectivamente&lt;/span&gt;
+
+---
+
+layout: false
+
+class: bg-main1 center middle hide-slide-number
+
+.reveal-text.bg-main2[.pad1[
+.font4.center[The End]
+]]
 
 
 
