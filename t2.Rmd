@@ -1,6 +1,6 @@
 ---
 title: "PGFPLOTS/TIKZ"
-subtitle: "Inicios"
+subtitle: "The beginning"
 author: "..."
 institute: "..."
 date: "(updated: `r Sys.Date()`)"
@@ -64,56 +64,56 @@ class: split-20 with-border
 
 class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 
-#### `Paquetes`
+#### `Packages`
 
-Recordemos que $\LaTeX$ es un conjunto de instruccion de $\TeX$ entonces necesitamos algunas cosas, pero primero hay que definir como nos gusta trabajar
+Let's remember that $\LaTeX$ is a set of $\TeX$ instructions, therefore, we need to know some things before starting, in this way, we need to define how we like to work
 
-#### `En la Nube`
+#### `In the Cloud`
 
-Una opcion muy popular para lo que empienzan en LaTeX es la opcion de Usar la nube, la mejor plataforma hoy en dia es [OverLeaf](www.overleaf.com), tiene sus propios tutoriales, miles de plantillas, se puede trabajar en equipo con otros editores en latex, entre muchas otras cosas positiva que nos brinda la tecnologia de la Nube
+A very popular option for beginners in LaTeX is the option to use the cloud, the best platform today is [OverLeaf](www.overleaf.com), it has its own tutorials, thousands of templates, you can work as a team with other editors in latex, among many other positive things that Cloud technology offers us
 
-#### `Entorno Local`
+#### `Local Environment`
 
-Dependiendo de tu sistema operativo la forma de instalar puede variar pero siempre vamos a necesitar descargar e instalar todos los paquetes para poder y utilizar LaTex, actualmente hay de unas version basica y unas version full.
+Depending on your operating system, the way to install $\LaTeX$ may vary, however, we will always need to download and install all the packages to be able to use LaTeX. Currently there is a basic version and a full version.
 
-Luego deberiamos instalar un [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), para trabajar de forma mas amigable, ya que el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) que viene por defecto es bastante arcaico y puedo no gustar a todos, en mi opinion el que mas me gusta y he usado siempre es el [TeXstudio](https://www.texstudio.org/) otro que se ha popularizado bastante es el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) [LyX](https://www.lyx.org/) es bueno, pero en mi opnion no lo recomimendo ya que, si bien promete redactar documentos de forma [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) la cual puede parecer bueno, pero no sabras que pasa tras camaras, y es sumamente importante saber eso.
+Later, we should install an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), to work in a more friendly way, since the [IDE](https://en.wikipedia.org/wiki/ Integrated_development_environment) that comes by default is quite archaic and may not be liked by everyone, in my opinion, the one that I like the most and that I have always used is [TeXstudio](https://www.texstudio.org/) another one that is has become quite popular is the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) [LyX](https://www.lyx.org/) , which I must admit is good, but in my opnion, I do not recommend it since, although it promises to write documents in [WYSIWYM](https://en.wikipedia.org/wiki/WYSIWYM) format, it has its technical disadvantages, since it hides many of the most powerful features that the environment $\LaTeX$ offers and therefore, you will not know what happens behind the scenes.
 
-Te dejare aqui una [Lista de Editores de $\TeX$](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) con cada una de las carecteristicas
+I will leave you here a [List of Editors of $\TeX$](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) with each of the characteristics
 
 #### `PDF`
 
-Uno de los objetivos finales es poder crear tu precioso [PDF](https://en.wikipedia.org/wiki/PDF). por lo tanto puede parecer obvio pero tambien necesitas un lector de [PDF](https://en.wikipedia.org/wiki/PDF).
+One of the ultimate goals is to be able to create your precious [PDF](https://en.wikipedia.org/wiki/PDF). Thus, it may seem obvious but you also need a [PDF](https://en.wikipedia.org/wiki/PDF) reader.
 
 ---
 
 class: hide-row2-col1 hide-row3-col1 hide-row4-col1 with-border bg-main1
 
-#### `Referencias`
+#### `References`
 
-Ya para Usuarios mas avanzados o para documentos mas elebarados tenemos herramientas para el uso de las referencias, una de las mas famosas es el [JabRef](https://www.jabref.org/). Esta herramienta permite generar guardar, actualizar y documentas nuestras referencias, sin embargo, para que Latex pueda usarla necesitaremos incluir alguna de las liberias de LaTeX que existen para el manejo y formateo de las referencia en el [PDF](https://en.wikipedia.org/wiki/PDF) final.
+For more advanced users (or for more elaborate documents) we have tools for the use of references, one of the most famous is [JabRef](https://www.jabref.org/). Tthe aforementioned tool allows us to generate, save, update and document our references, however, in order for Latex to be able to use it properly, we will need to include some of the LaTeX libraries that exist for handling and formatting references in the final [PDF](https:/ /en.wikipedia.org/wiki/PDF).
 
-#### `Otros`
+#### `Other`
 
-Mucha gente no lo sabe pero Latex puede Generar otro tipo de Archivos como los [.ps](https://en.wikipedia.org/wiki/PostScript), para esto existe [GPL Ghostscript y GSview](http://pages.cs.wisc.edu/~ghost/). y tambien existe [Dia](http://dia-installer.de/index.html.es) que es un programita muy sencillo para realizar imagenes directamente en [.eps](https://en.wikipedia.org/wiki/Encapsulated_PostScript)
+Many people don't know it but Latex can generate other types of files such as [.ps](https://en.wikipedia.org/wiki/PostScript), for the latter we have [GPL Ghostscript and GSview](http://pages .cs.wisc.edu/~ghost/). and there is also [Dia](http://dia-installer.de/index.html.es) which is a very simple program to make images directly in [.eps](https://en.wikipedia.org/wiki /Encapsulated_PostScript)
 
-#### `Sistemas Operativos`
-Evidentemente los paquetes de latex estan disponibles para todos los sistemas operativos
+#### `Operating Systems`
+Obviously latex packages are available for all operating systems
 
 ---
 
 class: hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
+Let's begin to install each of the tools to correctly use $\LaTeX$ in [Windows](https://en.wikipedia.org/wiki/Microsoft_Windows)
 
-Para este sistema operativo existe [`MikTeX`](https://en.wikipedia.org/wiki/MiKTeX)
+For this operating system there is [`MikTeX`](https://en.wikipedia.org/wiki/MiKTeX)
 
-**Step 1)** Descargar mediante este [link](https://miktex.org/download), recomiendo la version basica 64 bits ya que contiene todo lo que necesitamos
+**Step 1)** Download through this [link](https://miktex.org/download). I recommend the basic 64 bits version, since it contains everything we need
 ```{r, echo=FALSE,fig.align='center',out.width = '40%'}
 knitr::include_graphics("t2_files/figure-html/fig9.png")
 ```
 
-**Step 2)** Procedemos con la instalacion la cual es bastante comun, solo hay que tener en cuenta que en un punto te va a preguntar si deseamos instalar los paquetes directamente de la nube y le damos que SI, ver siguiente animacion
+**Step 2)** We proceed with the installation, which is quite standard, we just have to take into account that at one point it will ask you if we want to install the packages directly from the cloud, to which we proceed affirmatively, and then we continue with ``next'' .
 
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/gif1.gif")
@@ -124,18 +124,18 @@ knitr::include_graphics("t2_files/figure-html/gif1.gif")
 class: hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
 
-**Step 3)** Descargando el [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), el que usare es [TeXstudio](https://www.texstudio.org/), para esto nos vamos a este [link](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
+**Step 3)** Downloading the [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), the one I will use is [TeXstudio](https://www.texstudio.org/), for this, we go to this [link ](https://github.com/texstudio-org/texstudio/releases/download/4.2.0/texstudio-4.2.0-win-qt6.exe)
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/fig16.png")
 ```
-**Step 4)** La instalacion es aun mas sencilla, aunque las alarmas de Windows pueden arrojarte una advertenia, pero no te preocupes como se muestra acontinuacion:
+**Step 4)** Installation is even easier (although Windows alarms may throw you a warning, but don't worry, it's just protocol), as it is shown below:
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/gif2.gif")
 ```
 ---
 class: hide-row3-col1 hide-row4-col1 with-border bg-main1
 count: false
-**Step 5)** Vamos a comprobar nuestra instalacion, vamos a usar un peque;o fragmento de codigo para generar un pdf basico
+**Step 5)** We are going to check our installation, we are going to use a small piece of code to generate a basic pdf
 
 ```{}
 \documentclass{article} % Starts an article
@@ -165,18 +165,18 @@ count: false
   \end{align} 
 \end{document}
 ```
-Copiamos este codigo y creando una hoja en blanco, pegamos el codigo y pulsaremos el boton `F5` para generar nuestro PDF
+Copy this code and create a blank sheet, paste the code on the file and then press `F5` button to generate our PDF.
 ```{r, echo=FALSE,fig.align='center',out.width = '40%'}
 knitr::include_graphics("t2_files/figure-html/gif3.gif")
 ```
-Si podemos ver el documento compilado a nuestra derecha, entonces todo esta perfecto, sino, si presentas algun error, puedes enviarme un mensaje. no me enfocare mucho en el uso del IDE porque realmente es bastante comun... Crear documento nuevo, compilar, borrar documento, guardar, etc.
+If we can see the compiled document on our right, then everything is fine, if not, if you have some errors, you can send me a message. I will not focus too much on the use of the IDE because it's really quite common: Create new document, compile, delete document, save, etc.
 ---
 class: hide-row4-col1 with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas para usar correctemente $\LaTeX$ en [Linux](https://en.wikipedia.org/wiki/Linux) El uso de la linea de comandos en este tipo de sistemas operativos puede dar la impresion de que es mas complejo instalar programas, pero a mi parecer es mas sencillo. Si eres usuario frecuente de estos sistemas operativos, supongo que sabras que sulen varias sus metodos de instalacion, solo me enfocare en los 4 que considero mas comunes. y para proceder a la comprobacion, procedemos comolas diapostivias Windows
+Let's start installing each of the tools to correctly use $\LaTeX$ on [Linux](https://en.wikipedia.org/wiki/Linux). The use of the terminal in this type of operating system can give the impression that it is even more complex to install programs, however, in my opinion, it is way easier. If you are a frequent user of these operating systems, I suppose you know that their installation methods usually vary, I will only focus on the four methods that I consider that they are mostly used. To proceed with the verification, we proceed as explained in the Windows slides
 
-Para [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+For [Debian ](https://www.debian.org/index.en.html) and [Ubuntu](https://ubuntu.com/):
 
 ```{}
 # apt-get update
@@ -195,11 +195,11 @@ If you want the full $\LaTeX$ package run (Muchos GB de paquetes)
 ```{}
 # pacman -S texlive-most
 ```
-Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.debian.org/index.en.html) y [Ubuntu](https://ubuntu.com/):
+for installing [TeXstudio](https://www.texstudio.org/) in [Debian ](https://www.debian.org/index.en.html) and [Ubuntu](https://ubuntu.com/):
 ```{}
 # apt-get install texstudio
 ```
-[Fedora](https://getfedora.org/) y [ArchLinux](https://archlinux.org/) respectivamente:
+[Fedora](https://getfedora.org/) and [ArchLinux](https://archlinux.org/) respectively:
 ```{}
 # yum install texstudio
 ```
@@ -212,7 +212,7 @@ Para inslatar [TeXstudio](https://www.texstudio.org/) en [Debian ](https://www.d
 class: with-border bg-main1
 count: false
 
-Comencemos a instalar cada una de la herramientas de para usar correctemente $\LaTeX$ en [macOS](https://en.wikipedia.org/wiki/MacOS)
+Let's start installing each of the tools for the correct use of $\LaTeX$ on [macOS](https://en.wikipedia.org/wiki/MacOS)
 <br>
 
 
