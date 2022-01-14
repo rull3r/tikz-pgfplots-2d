@@ -113,7 +113,7 @@ For this operating system there is [`MikTeX`](https://en.wikipedia.org/wiki/MiKT
 knitr::include_graphics("t2_files/figure-html/fig9.png")
 ```
 
-**Step 2)** We proceed with the installation, which is quite standard, we just have to take into account that at one point it will ask you if we want to install the packages directly from the cloud, to which we proceed affirmatively, and then we continue with ``next'' .
+**Step 2)** We proceed with the installation, which is quite standard, we just have to take into account that at one point it will ask you if we want to install the packages directly from the cloud, to which we proceed affirmatively, and then we continue with ''next'' .
 
 ```{r, echo=FALSE,fig.align='center',out.width = '35%'}
 knitr::include_graphics("t2_files/figure-html/gif1.gif")
@@ -292,7 +292,6 @@ In the preamble, as we can notice, we can read the lines of code that are highli
 ---
 
 class: hide-row2-col1 with-border bg-main1
-
 
 ```{latex,eval=F}
 {{\documentclass{article}}}
